@@ -19,16 +19,16 @@ export default class Landing extends React.Component {
         <Nav navbar className='ml-auto'>
             <NavItem>
               <NavLink active>
-                BETA v1
+                BETA v1.0
               </NavLink>
             </NavItem>
         </Nav>
         <div className='ml-auto'></div>
       </Navbar>
 
-      <h3 className='headertext'>Let's share and learn from the developer failure stories</h3>
+      <h3 className='headertext'>Share and learn from the developer failure stories</h3>
       <p className='headersubtext'>A community for lifelong learners to share and discover their journeys towards learning something new.</p>
-      <Button outline>Explore BETA</Button>
+      <Button outline href='/login'>Explore the BETA</Button>
       <br />
       <img src='./header.jpg' className='headerimg'></img>
 
