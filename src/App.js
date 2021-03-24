@@ -13,6 +13,7 @@ import Signup from './Pages/Signup/signup';
 import Feed from './Pages/Feed/feed';
 import Story from './Pages/Story/story';
 import User from './Pages/User/user';
+import Write from './Pages/Write/write';
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
               </Route>
               <Route path="/user">
                   <User/>
+              </Route>
+              <Route path="/write">
+                  <Write/>
               </Route>
             </Switch>
         </Router>
