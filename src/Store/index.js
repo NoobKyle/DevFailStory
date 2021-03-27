@@ -1,9 +1,10 @@
-import { createStore } from "redux";
-import { devToolsEnhancer } from "redux-devtools-extension";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 import rootReducer from "./modules/rootReducer";
 
-const enhancer = process.env.NODE_ENV === "development" ? devToolsEnhancer() : null;
+const thunk = require('redux-thunk').default
+const enhancer = process.env.NODE_ENV === "development" ? composeWithDevTools( applyMiddleware(thunk)) : null;
 
 const store = createStore(rootReducer, enhancer);
 

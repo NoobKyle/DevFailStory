@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   NavbarBrand,
   Nav,
@@ -20,17 +20,23 @@ import {
 } from "shards-react";
 import './feed.css';
 
+import { useSelector, useDispatch } from "react-redux";
+import { GetData } from "../../Store/modules/feed/actions";
+
 import Navbar from '../../Components/NavBar';
 import FeedNav from '../../Components/FeedNav';
 import OurStoryCard from '../../Components/OurStoryCard';
 
-export default class Feed extends React.Component {
-  render() {
+const Feed: React.FC = () => {
 
-      let stories = [1,2,3,4,5];
+  let stories = [1,2,3,4,5];
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(GetData())
+  });
 
-    return (
+  return (
     <div>
       <Navbar />
 
@@ -91,4 +97,5 @@ export default class Feed extends React.Component {
     </div>
     );
   }
-}
+
+export default Feed;
