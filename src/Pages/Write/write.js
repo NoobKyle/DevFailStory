@@ -18,11 +18,11 @@ import {
   CardHeader,
   CardFooter
 } from "shards-react";
-import './story.css';
+import './write.css';
 
 import Navbar from '../../Components/NavBar';
 
-export default class Feed extends React.Component {
+export default class Write extends React.Component {
   render() {
     return (
     <div>

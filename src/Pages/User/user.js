@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Navbar,
   NavbarBrand,
   Nav,
   NavItem,
@@ -21,28 +20,74 @@ import {
 } from "shards-react";
 import './user.css';
 
-export default class User extends React.Component {
+import Navbar from '../../Components/NavBar';
 
+export default class User extends React.Component {
   render() {
     return (
     <div>
-      <Navbar type="light" expand="md" className='navigationbar'>
-        <NavbarBrand href="/" className='ml-auto'><strong>Developer-Fail-Story</strong></NavbarBrand>
-        <Nav navbar className='ml-auto'>
-            <NavItem>
-              <NavLink active>
-                BETA v1.0
-              </NavLink>
-            </NavItem>
-        </Nav>
-        <div className='ml-auto'></div>
-      </Navbar>
+      <Navbar />
 
       <Container>
         <Row>
             <Col sm="12" md="4" lg="8">
               <Card className='feedarea'>
                   <CardBody>
+                    <div className="profileHeader">
+                        <img src="https://source.unsplash.com/random"  className="profileImage"/>
+                        <div>
+                            <h3>Kyle Kadango</h3>
+                            <h6>489 Followers</h6>
+                            <a href="#">Follow</a>
+                        </div>
+
+                        <div className="socialLinks">
+                            <a href="https://twitter.com/kyle___t">Twitter</a>
+                            <a href="https://twitter.com/kyle___t">Blog</a>
+                        </div>
+                    </div>
+
+                    <div className="navigation">
+                        <Nav>
+                          <NavItem>
+                            <NavLink active href="#">
+                              Active
+                            </NavLink>
+                          </NavItem>
+                          <NavItem>
+                            <NavLink href="#">Link</NavLink>
+                          </NavItem>
+                          <NavItem>
+                            <NavLink href="#">Another Link</NavLink>
+                          </NavItem>
+                          <NavItem className="ml-auto">
+                            <NavLink href="/write">+ Story</NavLink>
+                          </NavItem>
+                        </Nav>
+                    </div>
+
+                    <hr />
+
+                    <div className="postsContainer">
+                    <Card>
+                        <CardImg top src="https://source.unsplash.com/random" />
+                        <CardBody>
+                          <p>This is the body of the card.</p>
+                        </CardBody>
+                     </Card>
+                    <Card>
+                        <CardImg top src="https://source.unsplash.com/random" />
+                        <CardBody>
+                          <p>This is the body of the card.</p>
+                        </CardBody>
+                     </Card>
+                    <Card>
+                        <CardImg top src="https://source.unsplash.com/random" />
+                        <CardBody>
+                          <p>This is the body of the card.</p>
+                        </CardBody>
+                     </Card>
+                    </div>
 
                   </CardBody>
               </Card>

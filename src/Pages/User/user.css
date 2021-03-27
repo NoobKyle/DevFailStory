@@ -17,10 +17,45 @@
     margin-top: 2rem;
 }
 
-.profile{
+.profileHeader{
     display: flex;
+}
 
+.profileHeader h3 {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    margin: 0;
+}
+.profileHeader h6 {
+    padding: 0.5rem;
+}
+
+.profileImage{
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+}
+
+.socialLinks{
+    padding-top: 1.5rem;
+    padding-left: 4rem;
+
+    font-size: 1.3rem;
+}
+
+.socialLinks a{
+    padding: 0.5rem;
+}
+
+.navigation{
     padding-top: 2rem;
-    padding-left: 25%;
-    padding-right: 25%;
+}
+
+.postsContainer{
+    padding: 1rem;
+}
+
+.postsContainer Card{
+    width: 50%;
 }
