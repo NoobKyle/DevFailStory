@@ -38,7 +38,7 @@ const Story: React.FC = () => {
                       <h3>{article.Title}</h3>
                       <br />
                       <h6>{article.Likes} Likes</h6>
-                      <h6><a href="/user">By {article.owner.username}</a></h6>
+                      <h6><a href={`/user/2`}>By {article.owner.username}</a></h6>
                       <br />
                       <br />
                       <p>{article.Content}</p>

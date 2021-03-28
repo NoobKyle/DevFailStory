@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Nav,
   NavItem,
@@ -10,13 +10,27 @@ import {
   Col,
   CardImg,
 } from "shards-react";
+import { useParams } from "react-router-dom";
 import './user.css';
+
+import { useSelector, useDispatch } from "react-redux";
+import { GetUser } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
 
-export default class User extends React.Component {
-  render() {
-    return (
+const User: React.FC = () => {
+
+  const dispatch = useDispatch();
+
+  const user = useSelector(state => state.feed.searchedUser);
+
+  var { id } = useParams();
+
+  useEffect(() => {
+    dispatch(GetUser(id))
+  },[dispatch, id]);
+
+  return (
     <div>
       <Navbar />
 
@@ -28,9 +42,9 @@ export default class User extends React.Component {
                     <div className="profileHeader">
                         <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
                         <div>
-                            <h3>Kyle Kadango</h3>
+                            <h3>{user.username}</h3>
                             <h6>489 Followers</h6>
-                            <a href="#">Follow</a>
+                            <a href="/feed">Follow</a>
                         </div>
 
                         <div className="socialLinks">
@@ -61,24 +75,16 @@ export default class User extends React.Component {
                     <hr />
 
                     <div className="postsContainer">
-                    <Card>
-                        <CardImg top src="https://source.unsplash.com/random" />
-                        <CardBody>
-                          <p>This is the body of the card.</p>
-                        </CardBody>
-                     </Card>
-                    <Card>
-                        <CardImg top src="https://source.unsplash.com/random" />
-                        <CardBody>
-                          <p>This is the body of the card.</p>
-                        </CardBody>
-                     </Card>
-                    <Card>
-                        <CardImg top src="https://source.unsplash.com/random" />
-                        <CardBody>
-                          <p>This is the body of the card.</p>
-                        </CardBody>
-                     </Card>
+
+                    {user.articles.map((article, index) => (
+                      <Card key={index}>
+                          <CardImg top src="https://source.unsplash.com/random" />
+                          <CardBody>
+                            <h4>{article.Title}</h4>
+                            <p>{article.Description}</p>
+                          </CardBody>
+                       </Card>
+                    ))}
                     </div>
 
                   </CardBody>
@@ -128,4 +134,5 @@ export default class User extends React.Component {
     </div>
     );
   }
-}
+
+export default User;
