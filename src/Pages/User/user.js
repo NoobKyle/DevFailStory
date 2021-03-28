@@ -1,22 +1,14 @@
 import React from "react";
 import {
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  Button,
-  Form,
-  FormInput,
-  FormGroup,
   Card,
   CardBody,
   Container,
   Row,
   Col,
-  CardTitle,
   CardImg,
-  CardHeader,
-  CardFooter
 } from "shards-react";
 import './user.css';
 
@@ -34,7 +26,7 @@ export default class User extends React.Component {
               <Card className='feedarea'>
                   <CardBody>
                     <div className="profileHeader">
-                        <img src="https://source.unsplash.com/random"  className="profileImage"/>
+                        <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
                         <div>
                             <h3>Kyle Kadango</h3>
                             <h6>489 Followers</h6>

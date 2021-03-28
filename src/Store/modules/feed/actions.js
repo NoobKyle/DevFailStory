@@ -1,6 +1,5 @@
 import { Dispatch } from 'redux'
 import axios from "axios";
-let result;
 
 export function feed(){
 	return {
@@ -14,20 +13,12 @@ export function article(string){
 		};
 	}
 
-async function getData2(){
-		await axios.get(`https://jsonplaceholder.typicode.com/users`)
-			.then(res => {
-				result = res.data;
-				console.log(result)
-			})
-	}
-
 export const GetData = () => {
 	    return ( dispatch:Dispatch ) => {
 	        var data
 
           console.log('Process: Fetching Feed')
-          axios.get(`https://jsonplaceholder.typicode.com/users`)
+          axios.get(`http://localhost:1337/articles`)
           .then(res => {
               data = res.data;
 

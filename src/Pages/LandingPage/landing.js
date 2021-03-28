@@ -1,9 +1,5 @@
 import React from "react";
 import {
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
   Button
 } from "shards-react";
 import './landing.css';
@@ -20,7 +16,7 @@ export default class Landing extends React.Component {
       <p className='headersubtext'>A community for lifelong learners to share and discover their journeys towards learning something new.</p>
       <Button outline href='/login'>Explore the BETA</Button>
       <br />
-      <img src='./header.jpg' className='headerimg'></img>
+      <img src='./header.jpg' className='headerimg' alt=""></img>
 
       <h4>Share Your Journey</h4>
       <p className='explainertext'>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing

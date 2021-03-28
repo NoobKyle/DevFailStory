@@ -1,13 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-  Form,
-  FormInput,
-  FormGroup,
   Card,
   CardBody,
   Container,
@@ -15,8 +7,6 @@ import {
   Col,
   CardTitle,
   CardImg,
-  CardHeader,
-  CardFooter
 } from "shards-react";
 import './feed.css';
 
@@ -29,12 +19,13 @@ import OurStoryCard from '../../Components/OurStoryCard';
 
 const Feed: React.FC = () => {
 
-  let stories = [1,2,3,4,5];
   const dispatch = useDispatch();
+
+  const articles = useSelector(state => state.feed.data);
 
   useEffect(() => {
     dispatch(GetData())
-  });
+  },[dispatch]);
 
   return (
     <div>
@@ -48,13 +39,13 @@ const Feed: React.FC = () => {
                       <FeedNav />
                       <hr />
 
-                      {stories.map((story, index) => (
+                      {articles.map((article, index) => (
                           <div key={index} style={{ width: "100%" }} className='feedcards'>
                               <CardImg src="https://source.unsplash.com/random/300x200" style={{ width: "15%", height: "100%", margin: "1rem"}}/>
-                              <CardTitle style={{ margin: "1.5rem"}}>{story}</CardTitle>
+                              <CardTitle style={{ margin: "1.5rem"}}>{article.id}</CardTitle>
                                 <div style={{ margin: "1.5rem"}}>
-                                    <CardTitle style={{ margin: "0"}}>Lorem Ipsum</CardTitle>
-                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <CardTitle style={{ margin: "0"}}>{article.Title}</CardTitle>
+                                    <p>{article.Description}</p>
                                 </div>
                           </div>
                         ))}

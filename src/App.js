@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from "react-router-dom";
 import './App.css';
@@ -19,7 +18,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-            <Switch> 
+            <Switch>
               <Route exact path="/">
                 <Redirect to="/landing" />
               </Route>

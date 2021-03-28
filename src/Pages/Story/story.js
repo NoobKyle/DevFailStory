@@ -1,22 +1,10 @@
 import React from "react";
 import {
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-  Form,
-  FormInput,
-  FormGroup,
   Card,
   CardBody,
   Container,
   Row,
   Col,
-  CardTitle,
-  CardImg,
-  CardHeader,
-  CardFooter
 } from "shards-react";
 import './story.css';
 
@@ -93,7 +81,7 @@ export default class Feed extends React.Component {
                       </p>
 
                       <div className="profile">
-                        <img src="https://source.unsplash.com/random" style={{ width: "15%"}} />
+                        <img src="https://source.unsplash.com/random" style={{ width: "15%"}} alt="" />
                         <div>
                             <h4 style={{ padding: "1rem"}}>Kyle Kadango</h4>
                             <a href="https://twitter.com/kyle___t">Twitter</a>
