@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Card,
   CardBody,
@@ -6,12 +6,26 @@ import {
   Row,
   Col,
 } from "shards-react";
+import { useParams } from "react-router-dom";
 import './story.css';
+
+import { useSelector, useDispatch } from "react-redux";
+import { GetArticle } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
 
-export default class Feed extends React.Component {
-  render() {
+const Story: React.FC = () => {
+
+    const dispatch = useDispatch();
+
+    const article = useSelector(state => state.feed.article);
+
+    var { id } = useParams();
+
+    useEffect(() => {
+      dispatch(GetArticle(id))
+    },[dispatch, id]);
+
     return (
     <div>
       <Navbar />
@@ -21,69 +35,17 @@ export default class Feed extends React.Component {
             <Col sm="12" md="4" lg="8">
               <Card className='feedarea'>
                   <CardBody>
-                      <h3>Building a 100M+ Business</h3>
+                      <h3>{article.Title}</h3>
                       <br />
-                      <h6>355 Likes</h6>
-                      <h6><a href="/user">By Kyle Kadango</a></h6>
+                      <h6>{article.Likes} Likes</h6>
+                      <h6><a href="/user">By {article.owner.username}</a></h6>
                       <br />
                       <br />
-                      <p>This is why the next 12 months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.
-                      </p>
-                      <p>This is why the next 12 months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.This is why the next 12
-                      months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.This is why the next 12
-                       months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.
-                      This is why the next 12 months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.This is why the next 12
-                      months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.
-                      </p>
-                      <p>This is why the next 12 months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.This is why the next 12
-                      months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.This is why the next 12
-                       months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.
-                      This is why the next 12 months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.This is why the next 12
-                      months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.
-                      </p>
-                      <p>This is why the next 12 months, I will be pulling back
-                      the curtain on my business and providing a raw, real and
-                      vulnerable look inside my entrepreneurial journey building
-                      my new agency, Predictable Growth.
-                      </p>
-
+                      <p>{article.Content}</p>
                       <div className="profile">
                         <img src="https://source.unsplash.com/random" style={{ width: "15%"}} alt="" />
                         <div>
-                            <h4 style={{ padding: "1rem"}}>Kyle Kadango</h4>
+                            <h4 style={{ padding: "1rem"}}>{article.owner.username}</h4>
                             <a href="https://twitter.com/kyle___t">Twitter</a>
                         </div>
                       </div>
@@ -134,4 +96,5 @@ export default class Feed extends React.Component {
     </div>
     );
   }
-}
+
+export default Story;

@@ -34,10 +34,10 @@ function App() {
               <Route path="/feed">
                   <Feed/>
               </Route>
-              <Route path="/story">
+              <Route path="/story/:id">
                   <Story/>
               </Route>
-              <Route path="/user">
+              <Route path="/user/:id">
                   <User/>
               </Route>
               <Route path="/write">
