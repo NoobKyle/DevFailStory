@@ -15,10 +15,6 @@ export default class Login extends React.Component {
     <div>
       <Navbar />
 
-      <h3 className='headertext'>Share and learn from the developer failure stories</h3>
-      <p className='headersubtext'>A community for lifelong learners to share and discover their journeys towards learning something new.</p>
-      <br />
-
       <h3 className='headertext'>Login</h3>
       <Form className='loginForm'>
           <FormGroup>
