@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import './App.css';
 
-import Landing from './Pages/LandingPage/landing';
+import Landing from './Pages/Static/LandingPage/landing';
+import NotFound from './Pages/Static/404/404';
 import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/signup';
 import Feed from './Pages/Feed/feed';
@@ -22,7 +23,7 @@ function App() {
               <Route exact path="/">
                 <Redirect to="/landing" />
               </Route>
-              <Route path="/landing">
+              <Route exact path="/landing">
                   <Landing />
               </Route>
               <Route path="/login">
@@ -42,6 +43,9 @@ function App() {
               </Route>
               <Route path="/write">
                   <Write/>
+              </Route>
+              <Route path="*">
+                  <NotFound/>
               </Route>
             </Switch>
         </Router>

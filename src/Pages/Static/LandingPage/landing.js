@@ -4,7 +4,7 @@ import {
 } from "shards-react";
 import './landing.css';
 
-import Navbar from '../../Components/NavBar';
+import Navbar from '../../../Components/NavBar';
 
 export default class Landing extends React.Component {
   render() {
