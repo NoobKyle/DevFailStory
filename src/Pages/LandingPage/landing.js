@@ -12,25 +12,24 @@ export default class Landing extends React.Component {
     <div>
       <Navbar />
 
-      <h3 className='headertext'>Share and learn from the developer failure stories</h3>
-      <p className='headersubtext'>A community for lifelong learners to share and discover their journeys towards learning something new.</p>
+      <h3 className='headertext'>Share and learn from developer failure stories</h3>
+      <p className='headersubtext'>A community for developers to make discoveries through story telling.</p>
       <Button outline href='/login'>Explore the BETA</Button>
       <br />
       <img src='./header.jpg' className='headerimg' alt=""></img>
 
       <h4>Share Your Journey</h4>
-      <p className='explainertext'>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing
-      and typesetting industry Lorem Ipsum has been the industry's standard
-      dummy text ever since the 1500s when an unknown printer took a galley of
-      type and scrambled it to make a type specimen book it has?
-      </p>
+      <p className='explainertext'>Tell us about that one time you pushed code to production on a Friday afternoon and the whole app crashed. <br/>
+      Or the time the new intern wiped out the production database due to wrong configuration and no backups where available.</p>
 
       <h4>Unpack New Skills</h4>
-      <p className='explainertext'>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing
-      and typesetting industry Lorem Ipsum has been the industry's standard
-      dummy text ever since the 1500s when an unknown printer took a galley of
-      type and scrambled it to make a type specimen book it has?
+      <p className='explainertext'>Save yourself $$$ by learning from other developers mistakes on how they blew it from not setting limits on firebase.
       </p>
+
+      <br />
+      <h4 className="quotetext">“It’s fine to celebrate success, but it is more important to heed the lessons of failure.” -Bill Gates</h4>
+
+      <p> Made with <span style={{color: "red"}}>&#9829;</span> by<a href="https://twitter.com/kyle___t"> Kyle</a></p>
     </div>
     );
   }
