@@ -10,11 +10,11 @@ export default class OurStoryCard extends React.Component {
         <Card className='feedarea'>
             <CardBody>
               <h5>Our Story</h5>
-              <p>This is why the next 12 months, I will be pulling back
-              the curtain on my business and providing a raw, real and
-              vulnerable look inside my entrepreneurial journey building
-              my new agency, Predictable Growth.
+              <p>My goal is for Dev Fail Story to be a source of inspiration,
+              education, and community for advanced and aspiring
+              developers on a global scale.
               </p>
+              <a href='/about'>Learn more</a>
             </CardBody>
         </Card>
     );

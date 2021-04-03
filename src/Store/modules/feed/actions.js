@@ -1,17 +1,6 @@
 import { Dispatch } from 'redux'
 import axios from "axios";
 
-export function feed(){
-	return {
-		type: "@feed/ALL"
-		};
-	}
-export function article(string){
-	return {
-		type: "@auth/LOGOUT",
-		payload: string
-		};
-	}
 
 export const GetData = () => {
 	return ( dispatch:Dispatch ) => {

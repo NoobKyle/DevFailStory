@@ -31,7 +31,7 @@ const Feed: React.FC = () => {
     <div>
       <Navbar />
 
-      <Container>
+      <Container className='maincontentcontainer'>
         <Row>
             <Col sm="12" md="4" lg="8">
               <Card className='feedarea'>
@@ -64,7 +64,7 @@ const Feed: React.FC = () => {
               <Row className='onboardSection'>
                   <Card className='feedarea'>
                       <CardBody>
-                        <h5>Top Stories</h5>
+                        <h5>Start Writing Today</h5>
                         <p>This is why the next 12 months, I will be pulling back
                         the curtain on my business and providing a raw, real and
                         vulnerable look inside my entrepreneurial journey building

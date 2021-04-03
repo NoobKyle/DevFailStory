@@ -7,13 +7,14 @@ import {
 import './App.css';
 
 import Landing from './Pages/Static/LandingPage/landing';
-import NotFound from './Pages/Static/404/404';
 import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/signup';
 import Feed from './Pages/Feed/feed';
 import Story from './Pages/Story/story';
 import User from './Pages/User/user';
 import Write from './Pages/Write/write';
+import NotFound from './Pages/Static/404/404';
+import About from './Pages/Static/About/about';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
               </Route>
               <Route path="/write">
                   <Write/>
+              </Route>
+              <Route path="/about">
+                  <About/>
               </Route>
               <Route path="*">
                   <NotFound/>
