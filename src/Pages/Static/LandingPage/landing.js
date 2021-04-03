@@ -5,6 +5,7 @@ import {
 import './landing.css';
 
 import Navbar from '../../../Components/NavBar';
+import Footer from '../../../Components/Footer';
 
 export default class Landing extends React.Component {
   render() {
@@ -29,7 +30,7 @@ export default class Landing extends React.Component {
       <br />
       <h4 className="quotetext">“It’s fine to celebrate success, but it is more important to heed the lessons of failure.” -Bill Gates</h4>
 
-      <p> Made with <span style={{color: "red"}}>&#9829;</span> by<a href="https://twitter.com/kyle___t"> Kyle</a></p>
+      <Footer />
     </div>
     );
   }
