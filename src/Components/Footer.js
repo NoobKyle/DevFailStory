@@ -15,7 +15,7 @@ export default class NavBar extends React.Component {
             <Row>
              <Col>
               <h5>Developer Fail Story</h5>
-              <p> Made with <span style={{color: "red"}}>&#9829;</span> by<a href="https://twitter.com/kyle___t" target='_blank'> Kyle</a></p>
+              <p> Made with <span style={{color: "red"}}>&#9829;</span> by<a href="https://twitter.com/kyle___t" target='_blank' rel="noreferrer"> Kyle</a></p>
              </Col>
              <Col>
               <h6>Navigation</h6>
@@ -29,7 +29,7 @@ export default class NavBar extends React.Component {
               <br/>
               <a href='/about#Ourstory'>Our Story</a>
               <br/>
-              <a href='https://twitter.com/kyle___t' target='_blank'>Contact</a>
+              <a href='https://twitter.com/kyle___t' target='_blank' rel="noreferrer">Contact</a>
              </Col>
            </Row>
           </Container>

@@ -1,7 +1,4 @@
 import React from "react";
-import {
-  Button
-} from "shards-react";
 import './about.css';
 
 import Navbar from '../../../Components/NavBar';
@@ -30,7 +27,7 @@ export default class Landing extends React.Component {
 
           <div className='quoteline'>
             <p>Success Stories Are Great - Failure Stories Are Even Better</p>
-            <a id='Ourstory'></a>
+            <div id='Ourstory'></div>
           </div>
 
           <h5>Building Dev fail Story</h5>

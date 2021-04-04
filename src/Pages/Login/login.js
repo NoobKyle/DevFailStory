@@ -20,10 +20,9 @@ const LoginPage: React.FC = () => {
 
     function LoginFunction(e){
       e.preventDefault();
-      console.log('Email: '+ email + ' ' + 'Password: ' + password)
       dispatch(Login(email,password));
 
-      setTimeout(function(){ window.location.replace("/feed"); }, 3000);
+      setTimeout(function(){ window.location.replace("/feed"); }, 4000);
     }
 
     return (
