@@ -12,6 +12,7 @@ import Signup from './Pages/Signup/signup';
 import Feed from './Pages/Feed/feed';
 import Story from './Pages/Story/story';
 import User from './Pages/User/user';
+import Me from './Pages/Me/me';
 import Write from './Pages/Write/write';
 import NotFound from './Pages/Static/404/404';
 import About from './Pages/Static/About/about';
@@ -44,6 +45,9 @@ function App() {
               </Route>
               <Route path="/write">
                   <Write/>
+              </Route>
+              <Route path="/me">
+                  <Me/>
               </Route>
               <Route path="/about">
                   <About/>

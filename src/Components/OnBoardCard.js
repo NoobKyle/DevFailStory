@@ -9,12 +9,15 @@ export default class OnBoardCard extends React.Component {
     return (
         <Card className='feedarea'>
             <CardBody>
-              <h5>Write Your Own Story</h5>
-              <p>This is why the next 12 months, I will be pulling back
-              the curtain on my business and providing a raw, real and
-              vulnerable look inside my entrepreneurial journey building
-              my new agency, Predictable Growth.
+              <h5>Start Writing Today</h5>
+              <p>Tell the full story, no filter, yes it was me, I deleted the db...
+              <br/>
+              The best mistake I have ever made in my life.
+              <br/>
+              Now is your chance to tell your story to a large audience, Join
+              the hype and start writing today.
               </p>
+              <a href='/write' style={{'text-decoration': 'underline'}}>Write</a>
             </CardBody>
         </Card>
     );

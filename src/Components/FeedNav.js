@@ -12,7 +12,7 @@ export default class FeedNav extends React.Component {
         <Nav>
           <NavItem>
             <NavLink active href="/story">
-              Active
+              Today
             </NavLink>
           </NavItem>
           <NavItem>
@@ -21,10 +21,8 @@ export default class FeedNav extends React.Component {
           <NavItem>
             <NavLink href="#">Another Link</NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">
-              Disabled Link
-            </NavLink>
+          <NavItem className='ml-auto' style={{'text-decoration':'underline'}}>
+            <NavLink href="/me"> My Account</NavLink>
           </NavItem>
         </Nav>
     );

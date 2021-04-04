@@ -95,7 +95,7 @@ export default class Write extends React.Component {
                 <Row>
               <Card className='feedarea'>
                   <CardBody>
-                    <h5>Our Story</h5>
+                    <h5>Instructions</h5>
                     <p>This is why the next 12 months, I will be pulling back
                     the curtain on my business and providing a raw, real and
                     vulnerable look inside my entrepreneurial journey building
@@ -108,7 +108,7 @@ export default class Write extends React.Component {
               <Row className='onboardSection'>
                   <Card className='feedarea'>
                       <CardBody>
-                        <h5>Share your story</h5>
+                        <h5>Growing Tips</h5>
                         <p>This is why the next 12 months, I will be pulling back
                         the curtain on my business and providing a raw, real and
                         vulnerable look inside my entrepreneurial journey building

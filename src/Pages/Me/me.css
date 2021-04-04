@@ -1,0 +1,62 @@
+.navigationbar{
+    background-color: white !important;
+    color: black;
+
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
+}
+
+.container{
+    margin-top: 4rem;
+}
+
+.feedcards{
+    display: flex;
+}
+
+.onboardSection{
+    margin-top: 2rem;
+}
+
+.profileHeader{
+    display: flex;
+}
+
+.profileHeader h3 {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    margin: 0;
+}
+.profileHeader h6 {
+    padding: 0.5rem;
+    padding-left: 2rem;
+}
+
+.profileImage{
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+}
+
+.socialLinks{
+    padding-top: 1.5rem;
+    padding-left: 4rem;
+
+    font-size: 1.3rem;
+}
+
+.socialLinks a{
+    padding: 0.5rem;
+}
+
+.navigation{
+    padding-top: 2rem;
+}
+
+.postsContainer{
+    padding: 1rem;
+}
+
+.postsContainer Card{
+    width: 50%;
+}

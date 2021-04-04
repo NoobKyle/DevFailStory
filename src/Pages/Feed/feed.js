@@ -16,6 +16,7 @@ import { GetData } from "../../Store/modules/feed/actions";
 import Navbar from '../../Components/NavBar';
 import FeedNav from '../../Components/FeedNav';
 import OurStoryCard from '../../Components/OurStoryCard';
+import OnBoardCard from '../../Components/OnBoardCard';
 
 const Feed: React.FC = () => {
 
@@ -62,26 +63,7 @@ const Feed: React.FC = () => {
                 </Row>
 
               <Row className='onboardSection'>
-                  <Card className='feedarea'>
-                      <CardBody>
-                        <h5>Start Writing Today</h5>
-                        <p>This is why the next 12 months, I will be pulling back
-                        the curtain on my business and providing a raw, real and
-                        vulnerable look inside my entrepreneurial journey building
-                        my new agency, Predictable Growth.
-                        </p>
-                        <p>This is why the next 12 months, I will be pulling back
-                        the curtain on my business and providing a raw, real and
-                        vulnerable look inside my entrepreneurial journey building
-                        my new agency, Predictable Growth.
-                        </p>
-                        <p>This is why the next 12 months, I will be pulling back
-                        the curtain on my business and providing a raw, real and
-                        vulnerable look inside my entrepreneurial journey building
-                        my new agency, Predictable Growth.
-                        </p>
-                      </CardBody>
-                  </Card>
+                  <OnBoardCard />
               </Row>
             </Col>
         </Row>

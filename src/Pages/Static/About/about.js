@@ -5,6 +5,8 @@ import {
 import './about.css';
 
 import Navbar from '../../../Components/NavBar';
+import Footer from '../../../Components/Footer';
+
 
 export default class Landing extends React.Component {
   render() {
@@ -28,10 +30,11 @@ export default class Landing extends React.Component {
 
           <div className='quoteline'>
             <p>Success Stories Are Great - Failure Stories Are Even Better</p>
+            <a id='Ourstory'></a>
           </div>
 
           <h5>Building Dev fail Story</h5>
-          <p className='shortstory'>Hey, My name is
+          <p className='longstory'>Hey, My name is
           <a href='https://twitter.com/kyle___t' className='mytwitter'> Kyle</a>
           , a 17 year old Full-Stack Developer and tech fanatic who build dev
            fail story after reading an article about how a local developer
@@ -56,6 +59,8 @@ export default class Landing extends React.Component {
           <div className='quoteline'>
             <hr/>
           </div>
+
+          <Footer/>
         </div>
       </div>
     );
