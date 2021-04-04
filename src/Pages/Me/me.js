@@ -30,6 +30,11 @@ const Me: React.FC = () => {
     dispatch(GetUser(id))
   },[dispatch, id]);
 
+  function logout(){
+    sessionStorage.removeItem("me");
+    setTimeout(function(){ window.location.replace("/"); }, 4000);
+  }
+
   return (
     <div>
       <Navbar />
@@ -66,8 +71,11 @@ const Me: React.FC = () => {
                           <NavItem>
                             <NavLink href="#">Another Link</NavLink>
                           </NavItem>
+                          <NavItem>
+                            <NavLink href="/write">Write +</NavLink>
+                          </NavItem>
                           <NavItem className="ml-auto">
-                            <NavLink href="/write">+ Story</NavLink>
+                            <NavLink onClick={() => { logout() }}>Logout -</NavLink>
                           </NavItem>
                         </Nav>
                     </div>
