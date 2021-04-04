@@ -44,7 +44,7 @@ const LoginPage: React.FC = () => {
 
       <br />
       <br />
-      <a href='/signup'>Signup</a>
+      <a href='/signup' style={{"font-weight":"bold", "text-decoration":"underline"}}>Signup</a>
     </div>
     );
   }

@@ -28,19 +28,42 @@ export const Login = ( email, password ) => {
 	};
 };
 
-export const GetUser = (id) => {
-		return ( dispatch:Dispatch ) => {
-			var data
 
-	    console.log('Process: Fetching User')
-	    axios.get(`http://localhost:1337/users/${id}`)
-	    .then(res => {
-	        data = res.data;
+export const Signup = ( username, email, password ) => {
+	return ( dispatch:Dispatch ) => {
+		var data;
 
-	    dispatch({
-	        type: "GET_USER",
-	        data: data,
-	      });
-	    })
-		};
+		console.log('Process: User Signup');
+		axios({
+			method: 'post',
+  		url: 'http://localhost:1337/auth/local/register',
+  		data: {
+				  "username": `${username}`,
+				  "email": `${email}`,
+				  "provider": "string",
+				  "password": `${password}`,
+				  "resetPasswordToken": "string",
+				  "confirmationToken": "string",
+				  "confirmed": false,
+				  "blocked": false,
+				  "role": "string",
+				  "articles": [
+				    "string"
+				  ],
+				  "created_by": "string",
+				  "updated_by": "string"
+  			}
+			})
+		.then(res => {
+			data = res.data;
+
+			sessionStorage.setItem("me", JSON.stringify(data));
+			console.log(sessionStorage.getItem("me"))
+
+			dispatch({
+				type: "AUTH_LOGIN",
+				data: data
+			});
+		})
 	};
+};
