@@ -1,16 +1,18 @@
 import Produce from "immer"
 
 const INITIAL_STATE = {
-	signed: false
+	signed: false,
+	data: {}
 };
 
 export default function user(state = INITIAL_STATE, action){
 	return Produce(state, draft => {
 		switch( action.type ){
-			case "@auth/LOGIN":
+			case "AUTH_LOGIN":
 				draft.signed = true;
+				draft.data = action.data;
 				break;
-			case "@auth/LOGOUT":
+			case "AUTH_LOGOUT":
 				draft.signed = false;
 				break
 			default:

@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-            <Switch>
+            <Switch> 
               <Route exact path="/">
                 <Redirect to="/landing" />
               </Route>

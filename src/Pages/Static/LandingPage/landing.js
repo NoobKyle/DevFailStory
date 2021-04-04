@@ -15,7 +15,7 @@ export default class Landing extends React.Component {
 
       <h3 className='headertext'>Share and learn from developer failure stories</h3>
       <p className='headersubtext'>A community for developers to make discoveries through story telling.</p>
-      <Button outline href='/login'>Explore the BETA</Button>
+      <Button outline href='/feed'>Explore the BETA</Button>
       <br />
       <img src='./header.jpg' className='headerimg' alt=""></img>
 
