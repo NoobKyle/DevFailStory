@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 
 import store from './Store';
 
+import Login from './LoginChecker';
+
 ReactDOM.render(
   <React.StrictMode>
   <Provider store={store}>
-    <App />
+    <Login />
   </Provider>
   </React.StrictMode>,
   document.getElementById('root')
