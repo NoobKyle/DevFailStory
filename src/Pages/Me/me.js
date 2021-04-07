@@ -10,25 +10,24 @@ import {
   Col,
   CardImg,
 } from "shards-react";
-import { useParams } from "react-router-dom";
 import './me.css';
 
 import { useSelector, useDispatch } from "react-redux";
-import { GetUser } from "../../Store/modules/feed/actions";
+import { Me } from "../../Store/modules/user/actions";
 
 import Navbar from '../../Components/NavBar';
 
-const Me: React.FC = () => {
+const MePage: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  const user = useSelector(state => state.feed.searchedUser);
-
-  var { id } = useParams();
+  const userdata = useSelector(state => state.user.me);
+  const me = userdata.user;
+  console.log(me.articles)
 
   useEffect(() => {
-    dispatch(GetUser(id))
-  },[dispatch, id]);
+    dispatch(Me());
+  },[dispatch]);
 
   function logout(){
     sessionStorage.removeItem("me");
@@ -47,7 +46,7 @@ const Me: React.FC = () => {
                     <div className="profileHeader">
                         <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
                         <div>
-                            <h3>{user.username}</h3>
+                            <h3>{me.username}</h3>
                             <h6>489 Followers</h6>
                             <a href="/feed">Follow</a>
                         </div>
@@ -83,15 +82,15 @@ const Me: React.FC = () => {
                     <hr />
 
                     <div className="postsContainer">
-
-
-                      <Card >
-                          <CardImg top src="https://source.unsplash.com/random" />
-                          <CardBody>
-                            <h4>User Profile Page</h4>
-                            <p>This will be the profile page of a user.</p>
-                          </CardBody>
-                       </Card>
+                      {me.articles.map((article, index) =>(
+                        <Card key={index} className='postcard'>
+                            <CardImg top src="https://source.unsplash.com/random" className='postimage'/>
+                            <CardBody>
+                              <h4>{article.Title}</h4>
+                              <p>{article.Description}</p>
+                            </CardBody>
+                         </Card>
+                      ))}
                     </div>
 
                   </CardBody>
@@ -104,4 +103,4 @@ const Me: React.FC = () => {
     );
   }
 
-export default Me;
+export default MePage;

@@ -67,3 +67,33 @@ export const Signup = ( username, email, password ) => {
 		})
 	};
 };
+
+export const Me = () => {
+	return ( dispatch:Dispatch ) => {
+	var data;
+	let me = JSON.parse( sessionStorage.getItem('me') || `{'username': 'NoUser'}`);
+
+	if( me.username !== 'NoUser'){
+		console.log('Process: User Found');
+		dispatch({
+			 type: "GET_USER",
+			 data: me,
+		 });
+	}else{
+		// TODO - this route require a jwt token but user might not be logged in.
+		console.log('Process: Fetching Calendar')
+		axios.get(`http://localhost:1337/users/me`)
+		.then(res => {
+			 data = res.data;
+
+		dispatch({
+			 type: "GET_USER",
+			 data: data
+			 });
+
+		console.log('Process: Adding User to SessionStorage');
+		sessionStorage.setItem('me', JSON.stringify(data));
+		})
+	}
+}
+}

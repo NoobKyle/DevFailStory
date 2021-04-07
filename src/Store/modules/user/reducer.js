@@ -2,7 +2,11 @@ import Produce from "immer"
 
 const INITIAL_STATE = {
 	signed: false,
-	data: {}
+	data: {},
+	me: {user: {
+		username : 'NoUser',
+		articles : []
+	}}
 };
 
 export default function user(state = INITIAL_STATE, action){
@@ -15,6 +19,9 @@ export default function user(state = INITIAL_STATE, action){
 			case "AUTH_LOGOUT":
 				draft.signed = false;
 				break
+			case "GET_USER":
+				draft.me = action.data;
+				break;
 			default:
 		}
 	});

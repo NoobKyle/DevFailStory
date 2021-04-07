@@ -60,3 +60,13 @@
 .postsContainer Card{
     width: 50%;
 }
+
+.postcard{
+  margin: auto;
+  margin-top: 3rem;
+  max-width: 50vw;
+}
+
+.postimage{
+  max-height: 45vh;
+}
