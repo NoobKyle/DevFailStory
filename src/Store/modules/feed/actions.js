@@ -19,14 +19,15 @@ export const GetData = () => {
 	};
 };
 
-export const GetArticle = (id) => {
+export const GetArticle = (slug) => {
 	return ( dispatch:Dispatch ) => {
 		var data
 
     console.log('Process: Fetching Article')
-    axios.get(`http://localhost:1337/articles/${id}`)
+		// http://localhost:1337/articles?Slug=meeting-elon-musk
+    axios.get(`http://localhost:1337/articles?Slug=${slug}`)
     .then(res => {
-        data = res.data;
+        data = res.data[0];
 
     dispatch({
         type: "GET_ARTICLE",

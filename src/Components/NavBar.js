@@ -12,7 +12,7 @@ export default class NavBar extends React.Component {
   render() {
     return (
         <Navbar type="light" expand="md" className='navigationbar'>
-          <NavbarBrand href="/" className='ml-auto'><strong>Developer-Fail-Story</strong></NavbarBrand>
+          <NavbarBrand href="/feed" className='ml-auto'><strong>Developer-Fail-Story</strong></NavbarBrand>
           <Nav navbar className='ml-auto'>
               <NavItem>
                 <NavLink active>

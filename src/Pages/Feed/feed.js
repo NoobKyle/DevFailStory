@@ -44,7 +44,7 @@ const Feed: React.FC = () => {
                           <div key={index} style={{ width: "100%" }} className='feedcards'>
                               <CardImg src="https://source.unsplash.com/random/300x200" style={{ width: "15%", height: "100%", margin: "1rem"}}/>
                               <CardTitle style={{ margin: "1.5rem"}}>{article.id}</CardTitle>
-                              <a href={`/story/${article.id}`} >
+                              <a href={`/story/${article.Slug}`} >
                                 <div style={{ margin: "1.5rem"}}>
                                     <CardTitle style={{ margin: "0"}}>{article.Title}</CardTitle>
                                     <p>{article.Description}</p>
