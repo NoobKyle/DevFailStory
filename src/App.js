@@ -24,7 +24,7 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <Redirect to="/landing" />
-              </Route> 
+              </Route>
               <Route exact path="/landing">
                   <Landing />
               </Route>
@@ -40,7 +40,7 @@ function App() {
               <Route path="/story/:id">
                   <Story/>
               </Route>
-              <Route path="/user/:id">
+              <Route path="/user/:name">
                   <User/>
               </Route>
               <Route path="/write">

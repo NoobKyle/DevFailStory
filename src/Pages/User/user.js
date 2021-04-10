@@ -24,11 +24,11 @@ const User: React.FC = () => {
 
   const user = useSelector(state => state.feed.searchedUser);
 
-  var { id } = useParams();
+  var { name } = useParams();
 
   useEffect(() => {
-    dispatch(GetUser(id))
-  },[dispatch, id]);
+    dispatch(GetUser(name))
+  },[dispatch, name]);
 
   return (
     <div>

@@ -87,7 +87,7 @@ export const Me = () => {
 			 data = res.data;
 
 		dispatch({
-			 type: "GET_USER",
+			 type: "GET_ME",
 			 data: data
 			 });
 

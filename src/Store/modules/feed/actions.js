@@ -37,14 +37,14 @@ export const GetArticle = (slug) => {
 	};
 };
 
-export const GetUser = (id) => {
+export const GetUser = (name) => {
 	return ( dispatch:Dispatch ) => {
 		var data
 
     console.log('Process: Fetching User')
-    axios.get(`http://localhost:1337/users/${id}`)
+    axios.get(`http://localhost:1337/users?username=${name}`)
     .then(res => {
-        data = res.data;
+        data = res.data[0];
 
     dispatch({
         type: "GET_USER",

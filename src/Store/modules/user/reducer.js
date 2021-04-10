@@ -19,7 +19,7 @@ export default function user(state = INITIAL_STATE, action){
 			case "AUTH_LOGOUT":
 				draft.signed = false;
 				break
-			case "GET_USER":
+			case "GET_ME":
 				draft.me = action.data;
 				break;
 			default:
