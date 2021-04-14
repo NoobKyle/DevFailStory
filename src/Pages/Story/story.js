@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 import {
   Card,
   CardBody,
@@ -6,9 +8,9 @@ import {
   Row,
   Col,
 } from "shards-react";
-import { useParams } from "react-router-dom";
 import './story.css';
 
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { GetArticle } from "../../Store/modules/feed/actions";
 
@@ -41,7 +43,7 @@ const Story: React.FC = () => {
                       <h6><a href={`/user/${article.owner.username}`}>By {article.owner.username}</a></h6>
                       <br />
                       <br />
-                      <p>{article.Content}</p>
+                      <ReactMarkdown remarkPlugins={[gfm]} children={article.Content} />
                       <div className="profile">
                         <img src="https://source.unsplash.com/random" style={{ width: "15%"}} alt="" />
                         <div>
