@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Editor from "rich-markdown-editor";
 import {
   Card,
@@ -11,8 +11,14 @@ import './write.css';
 
 import Navbar from '../../Components/NavBar';
 
-export default class Write extends React.Component {
-  render() {
+const Write: React.FC = () => {
+
+    const [editor, setEditor] = useState('');
+
+    function logeditorstate(){
+      console.log(editor);
+    }
+
     return (
     <div>
       <Navbar />
@@ -25,6 +31,7 @@ export default class Write extends React.Component {
                     <Editor
                       defaultValue="Hello world!"
                       className='editorarea'
+                      onChange={ (e) => {setEditor(e()); logeditorstate()} }
                       />
 
                   </CardBody>
@@ -74,4 +81,5 @@ export default class Write extends React.Component {
     </div>
     );
   }
-}
+
+export default Write;
