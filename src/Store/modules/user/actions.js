@@ -95,5 +95,23 @@ export const Me = () => {
 		sessionStorage.setItem('me', JSON.stringify(data));
 		})
 	}
+ }
 }
-}
+
+
+export const SaveArticle = ( title, description, content ) => {
+	return ( dispatch:Dispatch ) => {
+		console.log('Process : Saving Article');
+
+		var data = {
+			title: title,
+			description: title,
+			content: content,
+		}
+
+		dispatch({
+			type: "ARTICLE_SAVE",
+			data: data
+		});
+	}
+};

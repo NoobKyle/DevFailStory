@@ -12,13 +12,18 @@ import {
 } from "shards-react";
 import './write.css';
 
+import { useDispatch } from 'react-redux';
+import { SaveArticle } from "../../Store/modules/user/actions";
+
 import Navbar from '../../Components/NavBar';
 
 const Write: React.FC = () => {
 
-    const [editor, setEditor] = useState('No Content');
+    const dispatch = useDispatch();
+
     const [title, setTitle] = useState('No Title');
     const [description, setDescription] = useState('No Description');
+    const [editor, setEditor] = useState('No Content');
 
     function logeditorstate(){
       console.log(title);
@@ -27,8 +32,7 @@ const Write: React.FC = () => {
     }
 
     function SaveContent(){
-      console.log('Process : Article Saved');
-      
+      dispatch( SaveArticle(title, description, editor))
     }
 
     return (
@@ -79,7 +83,7 @@ const Write: React.FC = () => {
                         my new agency, Predictable Growth.
                         </p>
                         <Button outline onClick={() => { SaveContent() }}>Save1</Button>
-                        <Button outline>Save</Button>
+                        <Button outline onClick={() => { logeditorstate() }}>Logs</Button>
                         <Button outline>Save</Button>
                         <Button outline>Save</Button>
                         <Button outline>Save</Button>
