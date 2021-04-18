@@ -37,14 +37,16 @@ const Write: React.FC = () => {
 
       <Container>
         <Row>
-          <Col sm="12" md="4" lg="8">
+          <Col sm="12" md="8" lg="8">
             <Card className='writearea'>
               <CardBody>
+                  <h3>{title}</h3>
+                  <br/>
                   <Editor
                     autoFocus={true}
-                    defaultValue="Hello world!"
+                    defaultValue=""
                     className='editorarea'
-                    onChange={ (e) => {setEditor(e()); logeditorstate()} }
+                    onChange={ (e) => setEditor(e()) }
                     />
               </CardBody>
             </Card>
@@ -60,10 +62,9 @@ const Write: React.FC = () => {
                     <h6>Description</h6>
                     <FormTextarea onChange={(e) => setDescription(e.target.value)} />
                     <br/>
-                    <p>This is why the next 12 months, I will be pulling back
-                    the curtain on my business and providing a raw, real and
-                    vulnerable look inside my entrepreneurial journey building
-                    my new agency, Predictable Growth.</p>
+                    <p>Enter the Title and Description for your post which will
+                    be used on the main feed page to inform readers what your post
+                    is about at first glance.</p>
                   </CardBody>
                 </Card>
               </Row>
