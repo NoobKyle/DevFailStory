@@ -103,15 +103,19 @@ export const SaveArticle = ( title, description, content ) => {
 	return ( dispatch:Dispatch ) => {
 		console.log('Process : Saving Article');
 
-		var data = {
-			title: title,
-			description: title,
-			content: content,
-		}
+		return new Promise((resolve, reject) => {
+			var data = {
+				title: title,
+				description: title,
+				content: content,
+			}
 
-		dispatch({
-			type: "ARTICLE_SAVE",
-			data: data
-		});
+			dispatch({
+				type: "ARTICLE_SAVE",
+				data: data
+			});
+
+			resolve();
+		})
 	}
 };

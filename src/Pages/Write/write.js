@@ -8,7 +8,8 @@ import {
   Row,
   Col,
   FormInput,
-  FormTextarea
+  FormTextarea,
+  Modal, ModalBody, ModalHeader
 } from "shards-react";
 import './write.css';
 
@@ -24,6 +25,7 @@ const Write: React.FC = () => {
     const [title, setTitle] = useState('No Title');
     const [description, setDescription] = useState('No Description');
     const [editor, setEditor] = useState('No Content');
+    const [open, setOpen] = useState(false);
 
     function logeditorstate(){
       console.log(title);
@@ -31,13 +33,26 @@ const Write: React.FC = () => {
       console.log(editor);
     }
 
+    function toggle(){
+      setOpen(true);
+      setTimeout(function(){ setOpen(false) }, 1000);
+      console.log('Article has been saved !!!');
+    }
+
     function SaveContent(){
       dispatch( SaveArticle(title, description, editor))
+      .then(() => {
+        toggle();
+      })
     }
 
     return (
     <div>
       <Navbar />
+
+      <Modal size="sm" open={open}>
+        <ModalBody>📥 Article Saved!</ModalBody>
+      </Modal>
 
       <Container>
         <Row>
@@ -84,7 +99,7 @@ const Write: React.FC = () => {
                         </p>
                         <Button outline onClick={() => { SaveContent() }}>Save1</Button>
                         <Button outline onClick={() => { logeditorstate() }}>Logs</Button>
-                        <Button outline>Save</Button>
+                        <Button outline onClick={() => { toggle() }}>Modal</Button>
                         <Button outline>Save</Button>
                         <Button outline>Save</Button>
                         <Button outline>Save</Button>
