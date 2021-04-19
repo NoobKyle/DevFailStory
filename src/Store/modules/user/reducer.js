@@ -6,7 +6,8 @@ const INITIAL_STATE = {
 	me: {user: {
 		username : 'NoUser',
 		articles : []
-	}}
+	}},
+	write: {}
 };
 
 export default function user(state = INITIAL_STATE, action){
@@ -21,6 +22,9 @@ export default function user(state = INITIAL_STATE, action){
 				break
 			case "GET_ME":
 				draft.me = action.data;
+				break;
+			case "ARTICLE_SAVE":
+				draft.write = action.data;
 				break;
 			default:
 		}
