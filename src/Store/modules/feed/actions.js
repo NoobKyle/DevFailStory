@@ -1,13 +1,18 @@
 import { Dispatch } from 'redux'
 import axios from "axios";
 
+if (process.env.NODE_ENV == 'production') {
+	var API = process.env.REACT_APP_PRODUCTION_API;
+}else{
+	var API = process.env.REACT_APP_LOCAL_API;
+}
 
 export const GetData = () => {
 	return ( dispatch:Dispatch ) => {
 		var data
 
     console.log('Process: Fetching Feed')
-    axios.get(`http://localhost:1337/articles`)
+    axios.get(`${API}/articles`)
     .then(res => {
         data = res.data;
 
@@ -25,7 +30,7 @@ export const GetArticle = (slug) => {
 
     console.log('Process: Fetching Article')
 		// http://localhost:1337/articles?Slug=meeting-elon-musk
-    axios.get(`http://localhost:1337/articles?Slug=${slug}`)
+    axios.get(`${API}/articles?Slug=${slug}`)
     .then(res => {
         data = res.data[0];
 
@@ -42,7 +47,7 @@ export const GetUser = (name) => {
 		var data
 
     console.log('Process: Fetching User')
-    axios.get(`http://localhost:1337/users?username=${name}`)
+    axios.get(`${API}/users?username=${name}`)
     .then(res => {
         data = res.data[0];
 

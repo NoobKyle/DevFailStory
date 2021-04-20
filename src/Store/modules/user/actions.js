@@ -1,6 +1,12 @@
 import { Dispatch } from 'redux';
 import axios from 'axios';
 
+if (process.env.NODE_ENV == 'production') {
+	var API = process.env.REACT_APP_PRODUCTION_API;
+}else{
+	var API = process.env.REACT_APP_LOCAL_API;
+}
+
 export const Login = ( email, password ) => {
 	return ( dispatch:Dispatch ) => {
 		var data;
@@ -8,7 +14,7 @@ export const Login = ( email, password ) => {
 		console.log('Process: User Login');
 		axios({
 			method: 'post',
-  		url: 'http://localhost:1337/auth/local',
+  		url: `${API}/auth/local`,
   		data: {
     		"identifier": `${email}`,
     		"password": `${password}`
@@ -36,7 +42,7 @@ export const Signup = ( username, email, password ) => {
 		console.log('Process: User Signup');
 		axios({
 			method: 'post',
-  		url: 'http://localhost:1337/auth/local/register',
+  		url: `${API}/auth/local/register`,
   		data: {
 				  "username": `${username}`,
 				  "email": `${email}`,
@@ -82,7 +88,7 @@ export const Me = () => {
 	}else{
 		// TODO - this route require a jwt token but user might not be logged in.
 		console.log('Process: Fetching Calendar')
-		axios.get(`http://localhost:1337/users/me`)
+		axios.get(`${API}/users/me`)
 		.then(res => {
 			 data = res.data;
 
