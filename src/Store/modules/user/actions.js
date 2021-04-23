@@ -25,7 +25,6 @@ export const Login = ( email, password ) => {
 			data = res.data;
 
 			sessionStorage.setItem("me", JSON.stringify(data));
-			console.log(sessionStorage.getItem("me"))
 
 			dispatch({
 				type: "AUTH_LOGIN",
@@ -65,7 +64,6 @@ export const Signup = ( username, email, password ) => {
 			data = res.data;
 
 			sessionStorage.setItem("me", JSON.stringify(data));
-			console.log(sessionStorage.getItem("me"))
 
 			dispatch({
 				type: "AUTH_LOGIN",
@@ -83,7 +81,7 @@ export const Me = () => {
 	if( me.username !== 'NoUser'){
 		console.log('Process: User Found');
 		dispatch({
-			 type: "GET_USER",
+			 type: "GET_ME",
 			 data: me,
 		 });
 	}else{

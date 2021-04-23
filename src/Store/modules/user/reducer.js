@@ -3,10 +3,10 @@ import Produce from "immer"
 const INITIAL_STATE = {
 	signed: false,
 	data: {},
-	me: {user: {
+	me: {
 		username : 'NoUser',
 		articles : []
-	}},
+	},
 	write: {}
 };
 
@@ -21,7 +21,8 @@ export default function user(state = INITIAL_STATE, action){
 				draft.signed = false;
 				break
 			case "GET_ME":
-				draft.me = action.data;
+				let userData = action.data;
+				draft.me = userData.user;
 				break;
 			case "ARTICLE_SAVE":
 				draft.write = action.data;

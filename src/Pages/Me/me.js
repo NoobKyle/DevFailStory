@@ -21,10 +21,8 @@ const MePage: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  const userdata = useSelector(state => state.user.me);
-  const me = userdata.user;
-  console.log(me.articles)
-
+  const me = useSelector(state => state.user.me);
+  
   useEffect(() => {
     dispatch(Me());
   },[dispatch]);
