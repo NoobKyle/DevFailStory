@@ -1,6 +1,6 @@
 import Produce from "immer"
 
-const INITIAL_STATE = {
+const initialState = {
 	signed: false,
 	data: {},
 	me: {
@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 	write: {}
 };
 
-export default function user(state = INITIAL_STATE, action){
+export default function userReducer(state = initialState, action){
 	return Produce(state, draft => {
 		switch( action.type ){
 			case "AUTH_LOGIN":

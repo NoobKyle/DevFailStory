@@ -21,8 +21,8 @@ const MePage: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  const me = useSelector(state => state.user.me);
-  
+  const me = useSelector(state => state.userReducer.me);
+
   useEffect(() => {
     dispatch(Me());
   },[dispatch]);
