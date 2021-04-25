@@ -27,9 +27,9 @@ const MePage: React.FC = () => {
     dispatch(Me());
   },[dispatch]);
 
-  function logout(){
-    sessionStorage.removeItem("me");
-    setTimeout(function(){ window.location.replace("/"); }, 4000);
+  async function logout(){
+    await sessionStorage.removeItem("me");
+    await window.location.replace("/"); 
   }
 
   return (
