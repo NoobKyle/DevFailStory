@@ -1,6 +1,6 @@
 import Produce from "immer";
 
-const INITIAL_STATE = {
+const initialState = {
 	data: [],
 	article: {
 		owner: "No User"
@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 	}
 };
 
-export default function feed(state = INITIAL_STATE, action){
+export default function feed(state = initialState, action){
 	return Produce(state, draft => {
 		switch( action.type ){
 			case "GET_FEED":

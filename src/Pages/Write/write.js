@@ -9,7 +9,7 @@ import {
   Col,
   FormInput,
   FormTextarea,
-  Modal, ModalBody, ModalHeader
+  Modal, ModalBody
 } from "shards-react";
 import './write.css';
 

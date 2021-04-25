@@ -1,6 +1,13 @@
 import { Dispatch } from 'redux';
 import axios from 'axios';
 
+var Endpoint;
+if (process.env.NODE_ENV === 'production') {
+	Endpoint = process.env.REACT_APP_PRODUCTION_API;
+}else{
+	Endpoint = process.env.REACT_APP_LOCAL_API;
+}
+
 export const Login = ( email, password ) => {
 	return ( dispatch:Dispatch ) => {
 		var data;
@@ -8,7 +15,7 @@ export const Login = ( email, password ) => {
 		console.log('Process: User Login');
 		axios({
 			method: 'post',
-  		url: 'http://localhost:1337/auth/local',
+  		url: `${Endpoint}/auth/local`,
   		data: {
     		"identifier": `${email}`,
     		"password": `${password}`
@@ -18,7 +25,6 @@ export const Login = ( email, password ) => {
 			data = res.data;
 
 			sessionStorage.setItem("me", JSON.stringify(data));
-			console.log(sessionStorage.getItem("me"))
 
 			dispatch({
 				type: "AUTH_LOGIN",
@@ -36,7 +42,7 @@ export const Signup = ( username, email, password ) => {
 		console.log('Process: User Signup');
 		axios({
 			method: 'post',
-  		url: 'http://localhost:1337/auth/local/register',
+  		url: `${Endpoint}/auth/local/register`,
   		data: {
 				  "username": `${username}`,
 				  "email": `${email}`,
@@ -58,7 +64,6 @@ export const Signup = ( username, email, password ) => {
 			data = res.data;
 
 			sessionStorage.setItem("me", JSON.stringify(data));
-			console.log(sessionStorage.getItem("me"))
 
 			dispatch({
 				type: "AUTH_LOGIN",
@@ -76,13 +81,13 @@ export const Me = () => {
 	if( me.username !== 'NoUser'){
 		console.log('Process: User Found');
 		dispatch({
-			 type: "GET_USER",
+			 type: "GET_ME",
 			 data: me,
 		 });
 	}else{
 		// TODO - this route require a jwt token but user might not be logged in.
 		console.log('Process: Fetching Calendar')
-		axios.get(`http://localhost:1337/users/me`)
+		axios.get(`${Endpoint}/users/me`)
 		.then(res => {
 			 data = res.data;
 
