@@ -7,7 +7,11 @@ const initialState = {
 		username : 'NoUser',
 		articles : []
 	},
-	write: {}
+	write: {
+      title: 'No Title',
+      description: 'No Title',
+      content: 'No Content'
+    }
 };
 
 export default function userReducer(state = initialState, action){

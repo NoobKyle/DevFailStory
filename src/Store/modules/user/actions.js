@@ -132,3 +132,50 @@ export const SaveArticle = ( title, description, content ) => {
 		})
 	}
 };
+
+
+export const PublishArticle = ( content ) => {
+	return ( dispatch:Dispatch ) => {
+		console.log('Process : Publishing Article');
+
+		return new Promise((resolve, reject) => {
+
+			var userData = JSON.parse(sessionStorage.getItem("me"));
+			var userDetails = userData.user;
+
+			axios({
+				method: 'post',
+	  		url: `${Endpoint}/articles`,
+	  		data: {
+					  "Title": `${content.title}`,
+					  "Description": `${content.description}`,
+					  "Content": `${content.content}`,
+					  "Date": "2021-04-26",
+					  "owner": {
+					    "id": `${userDetails.id}`,
+					    "username": `${userDetails.username}`,
+					    "email": `${userDetails.email}`,
+					    "provider": "string",
+					    "password": "string",
+					    "resetPasswordToken": "string",
+					    "confirmationToken": "string",
+					    "confirmed": true,
+					    "blocked": true,
+					    "role": "string",
+					    "articles": [
+					      "string"
+					    ],
+					    "created_by": "string",
+					    "updated_by": "string"
+					  },
+					  "Likes": 0,
+					  "published_at": "2021-04-26T19:48:01.865Z",
+					  "created_by": "string",
+					  "updated_by": "string"
+					}
+				})
+
+			resolve();
+		})
+	}
+};

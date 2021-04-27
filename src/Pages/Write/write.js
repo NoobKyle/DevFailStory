@@ -13,19 +13,23 @@ import {
 } from "shards-react";
 import './write.css';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { SaveArticle } from "../../Store/modules/user/actions";
+import { PublishArticle } from "../../Store/modules/user/actions";
 
 import Navbar from '../../Components/NavBar';
 
 const Write: React.FC = () => {
 
     const dispatch = useDispatch();
+    const contentPublish = useSelector(state => state.user.write)
 
     const [title, setTitle] = useState('No Title');
     const [description, setDescription] = useState('No Description');
     const [editor, setEditor] = useState('No Content');
+
     const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
 
     function logeditorstate(){
       console.log(title);
@@ -39,11 +43,28 @@ const Write: React.FC = () => {
       console.log('Article has been saved !!!');
     }
 
+    function toggle2(){
+      setOpen2(true);
+      setTimeout(function(){ setOpen2(false) }, 1000);
+      console.log('Article has been published !!!');
+    }
+
     function SaveContent(){
       dispatch( SaveArticle(title, description, editor))
       .then(() => {
         toggle();
       })
+    }
+
+    function PublishContent(){
+      if( contentPublish.title === "No Title"){
+        alert("Invalid Article !");
+      }else{
+        dispatch( PublishArticle( contentPublish ))
+        .then(() => {
+          toggle2();
+        })
+      }
     }
 
     return (
@@ -52,6 +73,10 @@ const Write: React.FC = () => {
 
       <Modal size="sm" open={open}>
         <ModalBody>📥 Article Saved!</ModalBody>
+      </Modal>
+
+      <Modal size="sm" open={open2}>
+        <ModalBody>📥 Article Published!</ModalBody>
       </Modal>
 
       <Container>
@@ -100,7 +125,7 @@ const Write: React.FC = () => {
                         <Button outline onClick={() => { SaveContent() }}>Save1</Button>
                         <Button outline onClick={() => { logeditorstate() }}>Logs</Button>
                         <Button outline onClick={() => { toggle() }}>Modal</Button>
-                        <Button outline>Save</Button>
+                        <Button outline onClick={() => { PublishContent() }}>Publish</Button>
                         <Button outline>Save</Button>
                         <Button outline>Save</Button>
                         <Button outline>Save</Button>
