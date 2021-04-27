@@ -47,6 +47,7 @@ const Write: React.FC = () => {
       setOpen2(true);
       setTimeout(function(){ setOpen2(false) }, 1000);
       console.log('Article has been published !!!');
+      window.location.replace("/feed");
     }
 
     function SaveContent(){

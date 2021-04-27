@@ -21,7 +21,7 @@ const MePage: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  const me = useSelector(state => state.userReducer.me);
+  const me = useSelector(state => state.user.me);
 
   useEffect(() => {
     dispatch(Me());
@@ -29,7 +29,7 @@ const MePage: React.FC = () => {
 
   async function logout(){
     await sessionStorage.removeItem("me");
-    await window.location.replace("/"); 
+    await window.location.replace("/");
   }
 
   return (

@@ -36,7 +36,7 @@ const Story: React.FC = () => {
         <Row>
             <Col sm="12" md="4" lg="8">
               <Card className='feedarea'>
-                  <CardBody>
+                  <CardBody className='articlearea'>
                       <h3>{article.Title}</h3>
                       <br />
                       <h6>{article.Likes} Likes</h6>
@@ -44,13 +44,7 @@ const Story: React.FC = () => {
                       <br />
                       <br />
                       <ReactMarkdown remarkPlugins={[gfm]} children={article.Content} />
-                      <div className="profile">
-                        <img src="https://source.unsplash.com/random" style={{ width: "15%"}} alt="" />
-                        <div>
-                            <h4 style={{ padding: "1rem"}}>{article.owner.username}</h4>
-                            <a href="https://twitter.com/kyle___t">Twitter</a>
-                        </div>
-                      </div>
+                      <hr/>
                   </CardBody>
               </Card>
             </Col>
