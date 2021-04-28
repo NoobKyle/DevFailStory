@@ -63,10 +63,10 @@
 
 .postcard{
   margin: auto;
-  margin-top: 3rem;
-  max-width: 50vw;
+  margin-top: 2rem;
+  max-width: 45vw;
 }
 
 .postimage{
-  max-height: 45vh;
+  max-height: 40vh;
 }

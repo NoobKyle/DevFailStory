@@ -21,9 +21,10 @@ const SignupPage: React.FC = () => {
 
     function SignupFunction(e){
       e.preventDefault();
-      dispatch(Signup(username, email, password));
-
-      setTimeout(function(){ window.location.replace("/feed"); }, 4000);
+      dispatch(Signup(username, email, password))
+      .then(() => {
+        window.location.replace("/feed");
+      })
     }
 
     return (

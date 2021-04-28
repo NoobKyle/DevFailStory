@@ -21,15 +21,15 @@ const MePage: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  const me = useSelector(state => state.userReducer.me);
+  const me = useSelector(state => state.user.me);
 
   useEffect(() => {
     dispatch(Me());
   },[dispatch]);
 
-  function logout(){
-    sessionStorage.removeItem("me");
-    setTimeout(function(){ window.location.replace("/"); }, 4000);
+  async function logout(){
+    await sessionStorage.removeItem("me");
+    await window.location.replace("/");
   }
 
   return (
