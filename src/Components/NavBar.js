@@ -15,7 +15,7 @@ export default class NavBar extends React.Component {
           <NavbarBrand href="/feed" className='ml-auto'><strong>Developer-Fail-Story</strong></NavbarBrand>
           <Nav navbar className='ml-auto'>
               <NavItem>
-                <NavLink active>
+                <NavLink active style={{fontSize: "1rem"}}>
                   BETA v1.0
                 </NavLink>
               </NavItem>
