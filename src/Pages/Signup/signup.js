@@ -39,7 +39,7 @@ const SignupPage: React.FC = () => {
           </FormGroup>
           <FormGroup>
             <label htmlFor="#username">Email</label>
-            <FormInput id="#username" placeholder="email@website.com" value={email} onChange={f => {setEmail(f.target.value)}} />
+            <FormInput id="#email" placeholder="email@website.com" value={email} onChange={f => {setEmail(f.target.value)}} />
           </FormGroup>
           <FormGroup>
             <label htmlFor="#password">Password</label>

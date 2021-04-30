@@ -33,8 +33,8 @@ const LoginPage: React.FC = () => {
       <h3 className='headertext'>Login</h3>
       <Form className='loginForm'>
           <FormGroup>
-            <label htmlFor="#username">Username</label>
-            <FormInput id="#username" placeholder="Username" value={email} onChange={f => {setEmail(f.target.value)}}/>
+            <label htmlFor="#username">Email</label>
+            <FormInput id="#username" placeholder="Email" value={email} onChange={f => {setEmail(f.target.value)}}/>
           </FormGroup>
           <FormGroup>
             <label htmlFor="#password">Password</label>

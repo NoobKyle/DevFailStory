@@ -51,18 +51,7 @@ export const Signup = ( username, email, password ) => {
 	  		data: {
 					  "username": `${username}`,
 					  "email": `${email}`,
-					  "provider": "string",
-					  "password": `${password}`,
-					  "resetPasswordToken": "string",
-					  "confirmationToken": "string",
-					  "confirmed": false,
-					  "blocked": false,
-					  "role": "string",
-					  "articles": [
-					    "string"
-					  ],
-					  "created_by": "string",
-					  "updated_by": "string"
+					  "password": `${password}`
 	  			}
 				})
 			.then(res => {
