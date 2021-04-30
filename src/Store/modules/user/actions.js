@@ -1,5 +1,6 @@
 import { Dispatch } from 'redux';
 import axios from 'axios';
+import slugify from 'react-slugify';
 
 var Endpoint;
 if (process.env.NODE_ENV === 'production') {
@@ -158,6 +159,7 @@ export const PublishArticle = ( content ) => {
 					    "updated_by": "string"
 					  },
 					  "Likes": 0,
+						"Slug": `${slugify(content.title)}`,
 					  "published_at": "2021-04-26T19:48:01.865Z",
 					  "created_by": "string",
 					  "updated_by": "string"
