@@ -17,18 +17,17 @@
     margin-top: 2rem;
 }
 
-.profileHeader{
-    display: flex;
+.profileheader{
+    text-align: center;
 }
 
-.profileHeader h3 {
-    padding-top: 1.5rem;
-    padding-left: 2rem;
-    margin: 0;
-}
-.profileHeader h6 {
-    padding: 0.5rem;
-    padding-left: 2rem;
+.username{
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 .profileImage{
@@ -36,17 +35,23 @@
     height: 10rem;
 
     border-radius: 50%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.bio{
+    padding-top: 1.2rem;
+    line-height: 0.1rem;
 }
 
 .socialLinks{
-    padding-top: 1.5rem;
-    padding-left: 4rem;
+  font-size: 1.2rem;
 
-    font-size: 1.3rem;
-}
+  align-items: center;
 
-.socialLinks a{
-    padding: 0.5rem;
+  padding-top: 1rem;
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
 .navigation{

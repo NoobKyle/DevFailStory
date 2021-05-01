@@ -41,32 +41,41 @@ const MePage: React.FC = () => {
             <Col sm="12" md="12" lg="12">
               <Card className='feedarea'>
                   <CardBody>
-                    <div className="profileHeader">
-                        <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
-                        <div>
+                    <div className="profiledeader">
+                        <div className="username">
+                          <div>
+                            <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
+                          </div>
+                          <div>
                             <h3>{me.username}</h3>
                             <h6>489 Followers</h6>
                             <a href="/feed">Follow</a>
+                          </div>
+                        </div>
+
+                        <div className="bio">
+                          <h6>Bio</h6>
+                          <p>I love writing code that solves problems.</p>
                         </div>
 
                         <div className="socialLinks">
-                            <a href="https://twitter.com/kyle___t">Twitter</a>
-                            <a href="https://twitter.com/kyle___t">Blog</a>
+                          <a href="https://twitter.com/kyle___t">Twitter</a>
+                          <a href="https://twitter.com/kyle___t">Blog</a>
                         </div>
+
+
                     </div>
 
                     <div className="navigation">
                         <Nav>
                           <NavItem>
-                            <NavLink active href="#">
-                              Active
-                            </NavLink>
+                            <NavLink href="#">Posts</NavLink>
                           </NavItem>
                           <NavItem>
-                            <NavLink href="#">Link</NavLink>
+                            <NavLink href="#">Comments</NavLink>
                           </NavItem>
                           <NavItem>
-                            <NavLink href="#">Another Link</NavLink>
+                            <NavLink href="#">Settings</NavLink>
                           </NavItem>
                           <NavItem>
                             <NavLink href="/write">Write +</NavLink>
