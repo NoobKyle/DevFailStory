@@ -21,31 +21,33 @@
     text-align: center;
 }
 
-.username{
-  display: flex;
-  text-align: center;
-  align-items: center;
+.profileImage{
+  width: 10rem;
+  height: 10rem;
 
+  border-radius: 50%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.username{
+  text-align: center;
+  line-height: 0.1rem;
+
+  margin-top: 2rem;
   padding-left: 30%;
   padding-right: 30%;
 }
 
-.profileImage{
-    width: 10rem;
-    height: 10rem;
-
-    border-radius: 50%;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
 .bio{
+    margin-top: 1.5rem;
     padding-top: 1.2rem;
     line-height: 0.1rem;
 }
 
 .socialLinks{
-  font-size: 1.2rem;
+  color: blue !important;
+  font-size: 1.1rem;
 
   align-items: center;
 

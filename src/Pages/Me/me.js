@@ -42,11 +42,11 @@ const MePage: React.FC = () => {
               <Card className='feedarea'>
                   <CardBody>
                     <div className="profiledeader">
-                        <div className="username">
+                        <div>
                           <div>
                             <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
                           </div>
-                          <div>
+                          <div className="username">
                             <h3>{me.username}</h3>
                             <h6>489 Followers</h6>
                             <a href="/feed">Follow</a>
