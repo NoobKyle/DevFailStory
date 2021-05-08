@@ -7,7 +7,7 @@ import {
 export default class OnBoardCard extends React.Component {
   render() {
     return (
-        <Card className='feedarea'>
+        <div className='feedarea'>
             <CardBody>
               <h5>Start Writing Today</h5>
               <p>Tell the full story, no filter, yes it was me, I deleted the db...
@@ -19,7 +19,7 @@ export default class OnBoardCard extends React.Component {
               </p>
               <a href='/write' style={{'text-decoration': 'underline'}}>Write</a>
             </CardBody>
-        </Card>
+        </div>
     );
   }
 }
