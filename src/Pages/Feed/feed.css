@@ -7,10 +7,15 @@
 
 .maincontentcontainer{
   margin-bottom: 4rem;
+  /* background-color: #D2D2D2; */
 }
 
 .container{
     margin-top: 4rem;
+}
+
+.feedarea{
+  border: 0.5px solid grey;
 }
 
 .feedcards{

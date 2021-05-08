@@ -7,7 +7,7 @@ import {
 export default class OurStoryCard extends React.Component {
   render() {
     return (
-        <Card className='feedarea'>
+        <div className='feedarea'>
             <CardBody>
               <h5>Our Story</h5>
               <p>My goal is for Dev Fail Story to be a source of inspiration,
@@ -16,7 +16,7 @@ export default class OurStoryCard extends React.Component {
               </p>
               <a href='/about' style={{'text-decoration': 'underline'}}>Learn more</a>
             </CardBody>
-        </Card>
+        </div>
     );
   }
 }

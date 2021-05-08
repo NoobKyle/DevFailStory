@@ -35,7 +35,7 @@ const Feed: React.FC = () => {
       <Container className='maincontentcontainer'>
         <Row>
             <Col sm="12" md="9" lg="8">
-              <Card className='feedarea'>
+              <div className='feedarea'>
                   <CardBody>
                       <FeedNav />
                       <hr />
@@ -54,7 +54,7 @@ const Feed: React.FC = () => {
                         ))}
 
                   </CardBody>
-              </Card>
+              </div>
             </Col>
 
             <Col>
