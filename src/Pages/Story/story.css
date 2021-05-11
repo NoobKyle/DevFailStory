@@ -1,23 +1,12 @@
-.navigationbar{
-    background-color: white !important;
-    color: black;
+.storyearea{
+  font-size: 21px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.77;
 
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
-}
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-.container{
-    margin-top: 4rem;
-}
-
-.feedcards{
-    display: flex;
-}
-
-.onboardSection{
-    margin-top: 2rem;
-}
-
-.articlearea{
-  min-height: 70vh;
-  padding-bottom: 3rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
