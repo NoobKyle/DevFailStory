@@ -15,7 +15,8 @@
 }
 
 .feedarea{
-  border: 0.5px solid grey;
+  border-left: 0.5px solid grey;
+  border-top: 0.5px solid grey;
 }
 
 .feedcards{
@@ -28,4 +29,9 @@
 
 a{
   color: black !important;
+  text-decoration: none !important;
+}
+
+a:hover{
+  color: #323EBE !important;
 }
