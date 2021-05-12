@@ -14,6 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { GetData } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
+import Footer from '../../Components/Footer';
 import FeedNav from '../../Components/FeedNav';
 import OurStoryCard from '../../Components/OurStoryCard';
 import OnBoardCard from '../../Components/OnBoardCard';
@@ -69,6 +70,7 @@ const Feed: React.FC = () => {
         </Row>
       </Container>
 
+      <Footer/>
     </div>
     );
   }
