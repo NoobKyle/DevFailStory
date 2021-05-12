@@ -11,15 +11,15 @@ export default class FeedNav extends React.Component {
     return (
         <Nav>
           <NavItem>
-            <NavLink active href="/story">
+            <NavLink disable href="#">
               Today
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Link</NavLink>
+            <NavLink disable href="#">Link</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Another Link</NavLink>
+            <NavLink disable href="#">Another Link</NavLink>
           </NavItem>
           <NavItem className='ml-auto' style={{'text-decoration':'underline'}}>
             <NavLink href="/me"> My Account</NavLink>

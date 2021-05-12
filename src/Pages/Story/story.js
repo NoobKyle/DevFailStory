@@ -15,6 +15,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { GetArticle } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
+import LikeShare from '../../Components/LikeShare/likeshare';
 
 const Story: React.FC = () => {
 
@@ -40,7 +41,7 @@ const Story: React.FC = () => {
           <br />
           <br />
           <ReactMarkdown remarkPlugins={[gfm]} children={article.Content} />
-          <hr/>
+          <LikeShare/>
       </CardBody>
 
     </div>
