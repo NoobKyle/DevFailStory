@@ -16,6 +16,7 @@ import { GetArticle } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
 import LikeShare from '../../Components/LikeShare/likeshare';
+import ReadMore from '../../Components/ReadMore/readmore';
 
 const Story: React.FC = () => {
 
@@ -42,6 +43,7 @@ const Story: React.FC = () => {
           <br />
           <ReactMarkdown remarkPlugins={[gfm]} children={article.Content} />
           <LikeShare/>
+          <ReadMore/>
       </CardBody>
 
     </div>
