@@ -7,14 +7,11 @@
 
 .container{
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .feedcards{
     display: flex;
-}
-
-.onboardSection{
-    margin-top: 2rem;
 }
 
 .profileHeader{
@@ -59,4 +56,14 @@
 
 .postsContainer Card{
     width: 50%;
+}
+
+.postcard{
+  margin: auto;
+  margin-top: 2rem;
+  max-width: 45vw;
+}
+
+.postimage{
+  max-height: 40vh;
 }

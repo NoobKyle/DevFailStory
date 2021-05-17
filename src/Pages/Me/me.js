@@ -16,6 +16,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Me } from "../../Store/modules/user/actions";
 
 import Navbar from '../../Components/NavBar';
+import Footer from '../../Components/Footer';
+
 
 const MePage: React.FC = () => {
 
@@ -105,6 +107,8 @@ const MePage: React.FC = () => {
             </Col>
         </Row>
       </Container>
+
+      <Footer/>
 
     </div>
     );
