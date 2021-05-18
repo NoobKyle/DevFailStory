@@ -17,6 +17,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { GetUser } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
+import Footer from '../../Components/Footer';
+
 
 const User: React.FC = () => {
 
@@ -77,8 +79,8 @@ const User: React.FC = () => {
                     <div className="postsContainer">
 
                     {user.articles.map((article, index) => (
-                      <Card key={index}>
-                          <CardImg top src="https://source.unsplash.com/random" />
+                      <Card key={index} className="postcard">
+                          <CardImg src="https://source.unsplash.com/random" className="postimage" />
                           <CardBody>
                             <h4>{article.Title}</h4>
                             <p>{article.Description}</p>
@@ -92,20 +94,7 @@ const User: React.FC = () => {
             </Col>
 
             <Col>
-                <Row>
-              <Card className='feedarea'>
-                  <CardBody>
-                    <h5>Our Story</h5>
-                    <p>This is why the next 12 months, I will be pulling back
-                    the curtain on my business and providing a raw, real and
-                    vulnerable look inside my entrepreneurial journey building
-                    my new agency, Predictable Growth.
-                    </p>
-                  </CardBody>
-              </Card>
-              </Row>
-
-              <Row className='onboardSection'>
+              <Row>
                   <Card className='feedarea'>
                       <CardBody>
                         <h5>Share your story</h5>
@@ -131,6 +120,7 @@ const User: React.FC = () => {
         </Row>
       </Container>
 
+      <Footer/>
     </div>
     );
   }

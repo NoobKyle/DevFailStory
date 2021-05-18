@@ -22,16 +22,19 @@ const ReadMore: React.FC = () => {
               <img src='https://source.unsplash.com/random'/>
               <br/>
               <h5>This is the title</h5>
+              <p className="smalltext">The Description for the post would be here</p>
             </Col>
             <Col className="smallercontainer">
               <img src='https://source.unsplash.com/random'/>
               <br/>
               <h5>This is the title</h5>
+              <p className="smalltext">The Description for the post would be here</p>
             </Col>
             <Col className="smallercontainer">
               <img src='https://source.unsplash.com/random'/>
               <br/>
               <h5>This is the title</h5>
+              <p className="smalltext">The Description for the post would be here</p>
             </Col>
           </Row>
         </Container>
