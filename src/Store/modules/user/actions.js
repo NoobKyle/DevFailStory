@@ -102,7 +102,7 @@ export const Me = () => {
 }
 
 
-export const SaveArticle = ( title, description, content ) => {
+export const SaveArticle = ( title, description, headerurl, content ) => {
 	return ( dispatch:Dispatch ) => {
 		console.log('Process : Saving Article');
 
@@ -110,6 +110,7 @@ export const SaveArticle = ( title, description, content ) => {
 			var data = {
 				title: title,
 				description: title,
+				headerurl: headerurl,
 				content: content,
 			}
 
@@ -160,6 +161,7 @@ export const PublishArticle = ( content ) => {
 					  },
 					  "Likes": 0,
 						"Slug": `${slugify(content.title)}`,
+						"Headerurl": `${content.headerurl}`,
 					  "published_at": "2021-04-26T19:48:01.865Z",
 					  "created_by": "string",
 					  "updated_by": "string"

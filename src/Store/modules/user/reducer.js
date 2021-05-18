@@ -10,6 +10,7 @@ const initialState = {
 	write: {
       title: 'No Title',
       description: 'No Title',
+			headerurl: 'No Url',
       content: 'No Content'
     }
 };

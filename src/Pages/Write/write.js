@@ -26,6 +26,7 @@ const Write: React.FC = () => {
 
     const [title, setTitle] = useState('No Title');
     const [description, setDescription] = useState('No Description');
+    const [headerurl, setHeaderurl] = useState('No Url');
     const [editor, setEditor] = useState('No Content');
 
     const [open, setOpen] = useState(false);
@@ -34,6 +35,7 @@ const Write: React.FC = () => {
     function logeditorstate(){
       console.log(title);
       console.log(description);
+      console.log(headerurl);
       console.log(editor);
     }
 
@@ -51,7 +53,7 @@ const Write: React.FC = () => {
     }
 
     function SaveContent(){
-      dispatch( SaveArticle(title, description, editor))
+      dispatch( SaveArticle(title, description, headerurl, editor))
       .then(() => {
         toggle();
       })
@@ -107,7 +109,10 @@ const Write: React.FC = () => {
                     <h6>Description</h6>
                     <FormTextarea onChange={(e) => setDescription(e.target.value)} />
                     <br/>
-                    <p>Enter the Title and Description for your post which will
+                    <h6>Header Image Url</h6>
+                    <FormInput placeholder="https://website.com" onChange={(e) => setHeaderurl(e.target.value)} />
+                    <br/>
+                    <p>Enter the Title, Description and Header Image url for your post which will
                     be used on the main feed page to inform readers what your post
                     is about at first glance.</p>
                   </CardBody>
