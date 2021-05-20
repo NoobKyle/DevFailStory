@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  Card,
   CardBody,
   Container,
   Row,
@@ -44,7 +43,7 @@ const Feed: React.FC = () => {
 
                       {articles.map((article, index) => (
                           <div key={index} style={{ width: "100%" }} className='feedcards'>
-                              <CardImg src="https://source.unsplash.com/random/300x200" style={{ width: "15%", height: "100%", margin: "1rem"}}/>
+                              <CardImg src={article.Headerurl} style={{ width: "15%", height: "100%", margin: "1rem"}}/>
                               <CardTitle style={{ margin: "1.5rem"}}>{article.id}</CardTitle>
                               <a href={`/story/${article.Slug}`} style={{ width: "100%"}}>
                                 <div style={{ margin: "1.5rem"}}>
