@@ -128,14 +128,8 @@ const Write: React.FC = () => {
                         vulnerable look inside my entrepreneurial journey building
                         my new agency, Predictable Growth.
                         </p>
-                        <Button outline onClick={() => { SaveContent() }}>Save1</Button>
-                        <Button outline onClick={() => { logeditorstate() }}>Logs</Button>
-                        <Button outline onClick={() => { toggle() }}>Modal</Button>
+                        <Button outline onClick={() => { SaveContent() }}>Save</Button>
                         <Button outline onClick={() => { PublishContent() }}>Publish</Button>
-                        <Button outline>Save</Button>
-                        <Button outline>Save</Button>
-                        <Button outline>Save</Button>
-                        <Button outline>Save</Button>
                       </CardBody>
                   </Card>
               </Row>
