@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import {
-  Card,
   CardBody,
-  Container,
-  Row,
-  Col,
 } from "shards-react";
 import './story.css';
 
