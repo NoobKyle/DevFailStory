@@ -6,8 +6,7 @@ import {
   NavLink,
 } from "shards-react";
 
-export default class FeedNav extends React.Component {
-  render() {
+const FeedNav: React.FC = () => {
     return (
         <Nav>
           <NavItem>
@@ -27,4 +26,5 @@ export default class FeedNav extends React.Component {
         </Nav>
     );
   }
-}
+
+export default FeedNav;
