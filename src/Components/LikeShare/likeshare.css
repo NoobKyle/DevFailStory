@@ -1,5 +1,4 @@
 .likesharecontainer{
-  margin: 0 !important;
-  padding-left: 20rem;
-  padding-right: 20rem;
+  margin: 0 auto !important;
+  width: 50%;
 }

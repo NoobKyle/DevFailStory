@@ -31,13 +31,12 @@ const Story: React.FC = () => {
       <Navbar />
 
       <CardBody className='storyearea'>
-          <h2>{article.Title}</h2>
-          <br />
-          <h6>{article.Likes} Likes</h6>
+          <h2 className="storyheading">{article.Title}</h2>
+          <h6 className="storylikes">{article.Likes} Likes</h6>
           <h6><a href={`/user/${article.owner.username}`}>By {article.owner.username}</a></h6>
           <br />
           <br />
-          <ReactMarkdown remarkPlugins={[gfm]} children={article.Content} />
+          <ReactMarkdown remarkPlugins={[gfm]} children={article.Content} className="storycontent"/>
           <LikeShare/>
           <ReadMore/>
       </CardBody>
