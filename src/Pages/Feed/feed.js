@@ -44,10 +44,10 @@ const Feed: React.FC = () => {
                       {articles.map((article, index) => (
                           <div key={index} style={{ width: "100%" }} className='feedcards'>
                               <CardImg src={article.Headerurl} style={{ width: "15%", height: "100%", margin: "1rem"}}/>
-                              <CardTitle style={{ margin: "1.5rem"}}>{article.id}</CardTitle>
+                              <CardTitle style={{ margin: "1.5rem"}} >{article.id}</CardTitle>
                               <a href={`/story/${article.Slug}`} style={{ width: "100%"}}>
                                 <div style={{ margin: "1.5rem"}}>
-                                    <CardTitle style={{ margin: "0"}}>{article.Title}</CardTitle>
+                                    <CardTitle style={{ margin: "0"}} className="cardtitle">{article.Title}</CardTitle>
                                     <p>{article.Description}</p>
                                 </div>
                               </a>

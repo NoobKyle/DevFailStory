@@ -1,12 +1,27 @@
 .storyearea{
-  font-size: 21px;
+  font-size: 1.2rem;
   font-weight: normal;
   text-align: center;
-  line-height: 1.77;
+  line-height: 1.5;
 
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 
-  padding-left: 15rem;
-  padding-right: 15rem;
+  /* padding-left: 23rem;
+  padding-right: 23rem; */
+  /* width: calc(100% - 30px); */
+  width: 43.75rem;
+}
+
+.storyheading{
+  font-weight: 600;
+  font-size: 2.8rem;
+  padding-bottom: 1rem;
+}
+
+.storylikes{
+  margin: 0;
+}
+
+.storycontent{
+  text-align: left;
 }
