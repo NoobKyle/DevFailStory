@@ -1,12 +1,13 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-} from "shards-react";
+import { useSelector } from "react-redux";
+import { Container, Row, Col, } from "shards-react";
 import './readmore.css';
 
 const ReadMore: React.FC = () => {
+
+  const articles = useSelector(state => state.feed.data);
+  console.log("From Readmore: " + articles )
+  
   return (
     <div>
         <Container className='readmorecontainer'>
