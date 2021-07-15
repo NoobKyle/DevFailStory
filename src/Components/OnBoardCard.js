@@ -1,7 +1,7 @@
 
 import React from "react";
 import {
-  Card, CardBody
+  CardBody
 } from "shards-react";
 
 export default class OnBoardCard extends React.Component {

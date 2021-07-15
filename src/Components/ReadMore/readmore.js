@@ -1,14 +1,9 @@
 import React from "react";
 import {
-  CardBody,
   Container,
   Row,
   Col,
-  CardTitle,
-  CardImg,
 } from "shards-react";
-import { AiOutlineHeart } from 'react-icons/ai';
-import { FiShare, FiSave } from 'react-icons/fi';
 import './readmore.css';
 
 const ReadMore: React.FC = () => {
@@ -18,19 +13,19 @@ const ReadMore: React.FC = () => {
           <h5>Read More</h5>
           <Row>
             <Col className="smallercontainer">
-              <img src='https://source.unsplash.com/random'/>
+              <img src='https://source.unsplash.com/random' alt=""/>
               <br/>
               <h5>This is the title</h5>
               <p className="smalltext">The Description for the post would be here</p>
             </Col>
             <Col className="smallercontainer">
-              <img src='https://source.unsplash.com/random'/>
+              <img src='https://source.unsplash.com/random' alt=""/>
               <br/>
               <h5>This is the title</h5>
               <p className="smalltext">The Description for the post would be here</p>
             </Col>
             <Col className="smallercontainer">
-              <img src='https://source.unsplash.com/random'/>
+              <img src='https://source.unsplash.com/random' alt=""/>
               <br/>
               <h5>This is the title</h5>
               <p className="smalltext">The Description for the post would be here</p>

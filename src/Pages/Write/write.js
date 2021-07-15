@@ -32,13 +32,6 @@ const Write: React.FC = () => {
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
 
-    function logeditorstate(){
-      console.log(title);
-      console.log(description);
-      console.log(headerurl);
-      console.log(editor);
-    }
-
     function toggle(){
       setOpen(true);
       setTimeout(function(){ setOpen(false) }, 1000);
