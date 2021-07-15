@@ -9,6 +9,7 @@ import './story.css';
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { GetArticle } from "../../Store/modules/feed/actions";
+import { GetReadMore } from "../../Store/modules/feed/actions";
 
 import Navbar from '../../Components/NavBar';
 import LikeShare from '../../Components/LikeShare/likeshare';
@@ -24,6 +25,7 @@ const Story: React.FC = () => {
 
     useEffect(() => {
       dispatch(GetArticle(id))
+      dispatch(GetReadMore())
     },[dispatch, id]);
 
     return (

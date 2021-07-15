@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
-  Card,
-  CardBody,
   Container,
   Row,
   Col,
-  CardTitle,
-  CardImg,
 } from "shards-react";
 import { AiOutlineHeart } from 'react-icons/ai';
 import { FiShare, FiSave } from 'react-icons/fi';

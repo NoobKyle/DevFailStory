@@ -22,6 +22,8 @@ export default function feed(state = initialState, action){
 			case "GET_USER":
 				draft.searchedUser = action.data;
 				break
+			case "GET_READMORE":
+				draft.data = action.data;
 			default:
 		}
 	});
