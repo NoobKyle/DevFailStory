@@ -6,7 +6,6 @@ import './readmore.css';
 const ReadMore: React.FC = () => {
 
   const articles = useSelector(state => state.feed.data);
-  console.log("From Readmore: " + articles )
   
   return (
     <div>
