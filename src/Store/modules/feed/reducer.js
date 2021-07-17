@@ -23,7 +23,8 @@ export default function feed(state = initialState, action){
 				draft.searchedUser = action.data;
 				break
 			case "GET_READMORE":
-				draft.data = action.data;
+				console.log(action.data)
+				break
 			default:
 		}
 	});

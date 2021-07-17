@@ -12,11 +12,9 @@ import store from './Store';
 import Login from './LoginChecker';
 
 ReactDOM.render(
-  <React.StrictMode>
   <Provider store={store}>
     <Login />
-  </Provider>
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
