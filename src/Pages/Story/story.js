@@ -25,7 +25,6 @@ const Story: React.FC = () => {
 
     useEffect(() => {
       dispatch(GetArticle(id))
-      dispatch(GetReadMore())
     },[dispatch, id]);
 
     return (
