@@ -1,29 +1,37 @@
 .navigationbar{
-    background-color: white !important;
-    color: black;
+  background-color: white !important;
+  color: black;
 
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
-.container{
-    margin-top: 4rem;
+.writecontainer{
+  margin-top: 4rem;
+  background-color: #FCFCFD;
 }
 
 .feedcards{
-    display: flex;
+  display: flex;
 }
 
-.onboardSection{
-    margin-top: 2rem;
+.controls{
+  margin-top: 1rem;
 }
 
 .writearea{
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 .editorarea{
+  text-align: left;
 }
 
 .titlearea{
   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .title{
+    margin-top: 2rem;
+  }
 }

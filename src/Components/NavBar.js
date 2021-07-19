@@ -11,7 +11,7 @@ import {
 export default class NavBar extends React.Component {
   render() {
     return (
-        <Navbar type="light" expand="md" className='navigationbar'>
+        <Navbar type="light" expand="md" className='navigationbar' style={{position: "sticky", top: "0", zIndex: "1"}}>
           <NavbarBrand href="/feed" className='ml-auto'><strong>Developer-Fail-Story</strong></NavbarBrand>
           <Nav navbar className='ml-auto'>
               <NavItem>

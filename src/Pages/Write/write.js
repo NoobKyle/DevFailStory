@@ -75,11 +75,10 @@ const Write: React.FC = () => {
         <ModalBody>📥 Article Published!</ModalBody>
       </Modal>
 
-      <Container>
+      <Container className="writecontainer">
         <Row>
           <Col sm="12" md="8" lg="8">
-            <Card className='writearea'>
-              <CardBody>
+              <CardBody className='writearea'>
                   <h3>{title}</h3>
                   <br/>
                   <Editor
@@ -89,12 +88,10 @@ const Write: React.FC = () => {
                     onChange={ (e) => setEditor(e()) }
                     />
               </CardBody>
-            </Card>
           </Col>
 
           <Col>
               <Row>
-                <Card className='feedarea'>
                   <CardBody className='titlearea'>
                     <h5>Title</h5>
                     <FormInput placeholder="An Amazing Post" onChange={(e) => setTitle(e.target.value)} />
@@ -109,11 +106,9 @@ const Write: React.FC = () => {
                     be used on the main feed page to inform readers what your post
                     is about at first glance.</p>
                   </CardBody>
-                </Card>
               </Row>
 
-              <Row className='onboardSection'>
-                  <Card className='feedarea'>
+              <Row className='controls'>
                       <CardBody>
                         <h5>Controls</h5>
                         <p>This is why the next 12 months, I will be pulling back
@@ -124,7 +119,6 @@ const Write: React.FC = () => {
                         <Button outline onClick={() => { SaveContent() }}>Save</Button>
                         <Button outline onClick={() => { PublishContent() }}>Publish</Button>
                       </CardBody>
-                  </Card>
               </Row>
             </Col>
         </Row>

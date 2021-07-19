@@ -57,8 +57,8 @@ export default class Landing extends React.Component {
             <hr/>
           </div>
 
-          <Footer/>
         </div>
+        <Footer/>
       </div>
     );
   }

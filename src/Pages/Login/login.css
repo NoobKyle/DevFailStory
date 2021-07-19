@@ -20,3 +20,10 @@
     padding-left: 38%;
     padding-right: 38%;
 }
+
+@media only screen and (max-width: 600px) {
+  .loginForm{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
