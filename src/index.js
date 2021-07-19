@@ -7,9 +7,17 @@ import './index.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 
-import store from './Store';
+import firebase from "firebase/app";
+import "firebase/analytics";
+import { firebaseConfig } from "./config";
 
+import store from './Store';
 import Login from './LoginChecker';
+
+firebase.initializeApp(firebaseConfig);
+if (process.env.NODE_ENV === 'production') {
+  const analytics = firebase.analytics();
+}
 
 ReactDOM.render(
   <Provider store={store}>
