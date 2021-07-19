@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-import {
-  CardBody,
-} from "shards-react";
+import { CardBody } from "shards-react";
 import './story.css';
 
 import { useParams } from "react-router-dom";
