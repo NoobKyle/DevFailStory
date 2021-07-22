@@ -25,6 +25,10 @@
 .editorarea{
   text-align: left;
 }
+.editorarea a{
+  font-size: 1rem;
+  color: #3286db !important;
+}
 
 .titlearea{
   width: 100%;
