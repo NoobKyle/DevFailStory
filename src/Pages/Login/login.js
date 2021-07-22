@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Form,
-  FormInput,
-  FormGroup,
-  Modal,
-  ModalBody
-} from "shards-react";
+import { Button, Form, FormInput, FormGroup, Modal, ModalBody } from "shards-react";
+import BeatLoader from "react-spinners/BeatLoader";
 import './login.css';
 
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +14,8 @@ const LoginPage: React.FC = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const open = useSelector(state => state.user.error);
+    const error = useSelector(state => state.user.error);
+    const loading = useSelector(state => state.user.loading);
 
     function LoginFunction(e){
       e.preventDefault();
@@ -33,8 +28,13 @@ const LoginPage: React.FC = () => {
     return (
     <div>
       <Navbar />
-        <Modal size="sm" open={open} centered="true" className="error" toggle={()=>{}}>
+        <Modal open={error} centered="true" className="error" toggle={()=>{}}>
           <ModalBody>LOGIN ERROR !</ModalBody>
+        </Modal>
+        <Modal open={loading} centered="true" className="error" toggle={()=>{}}>
+          <ModalBody>
+            <BeatLoader color={"#212529"} loading={true}/>
+          </ModalBody>
         </Modal>
 
       <h3 className='headertext'>Login</h3>

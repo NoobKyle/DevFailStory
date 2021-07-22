@@ -1,6 +1,7 @@
 import { Dispatch } from 'redux';
 import axios from 'axios';
 import slugify from 'react-slugify';
+import { showLoading, hideLoading } from "./helper";
 
 var Endpoint;
 if (process.env.NODE_ENV === 'production') {
@@ -14,6 +15,7 @@ export const Login = ( email, password ) => {
 		var data;
 
 		console.log('Process: User Login');
+		showLoading(dispatch);
 		return new Promise((resolve, reject) => {
 			axios({
 				method: 'post',
@@ -33,9 +35,11 @@ export const Login = ( email, password ) => {
 					data: data
 				});
 
+				hideLoading(dispatch);
 				resolve();
 			})
 			.catch(err => {
+				hideLoading(dispatch);
 				dispatch({
 					type:"ERROR",
 					data: true
@@ -57,6 +61,7 @@ export const Signup = ( username, email, password ) => {
 		var data;
 
 		console.log('Process: User Signup');
+		showLoading(dispatch);
 		return new Promise((resolve, reject) => {
 			axios({
 				method: 'post',
@@ -77,9 +82,11 @@ export const Signup = ( username, email, password ) => {
 					data: data
 				});
 
+				hideLoading(dispatch);
 				resolve();
 			})
 			.catch(err => {
+				hideLoading(dispatch);
 				dispatch({
 					type:"ERROR",
 					data: true
@@ -129,7 +136,7 @@ export const Me = () => {
 export const SaveArticle = ( title, description, headerurl, content ) => {
 	return ( dispatch:Dispatch ) => {
 		console.log('Process : Saving Article');
-
+		showLoading(dispatch);
 		return new Promise((resolve, reject) => {
 			var data = {
 				title: title,
@@ -143,6 +150,7 @@ export const SaveArticle = ( title, description, headerurl, content ) => {
 				data: data
 			});
 
+			hideLoading(dispatch);
 			resolve();
 		})
 	}
@@ -152,7 +160,7 @@ export const SaveArticle = ( title, description, headerurl, content ) => {
 export const PublishArticle = ( content ) => {
 	return ( dispatch:Dispatch ) => {
 		console.log('Process : Publishing Article');
-
+		showLoading(dispatch);
 		return new Promise((resolve, reject) => {
 
 			var userData = JSON.parse(sessionStorage.getItem("me"));
@@ -192,9 +200,11 @@ export const PublishArticle = ( content ) => {
 					}
 				})
 				.then(res =>{
+					hideLoading(dispatch);
 					resolve();
 				})
 				.catch(err => {
+					hideLoading(dispatch);
 					dispatch({
 						type:"ERROR",
 						data: true
