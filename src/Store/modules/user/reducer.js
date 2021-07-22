@@ -13,7 +13,8 @@ const initialState = {
 			headerurl: 'No Url',
       content: 'No Content'
     },
-	error: false
+	error: false,
+	loading: false
 };
 
 export default function userReducer(state = initialState, action){
@@ -35,6 +36,9 @@ export default function userReducer(state = initialState, action){
 				break;
 			case "ERROR":
 				draft.error = action.data;
+				break;
+			case "LOADING":
+				draft.loading = action.data;
 				break;
 			default:
 		}
