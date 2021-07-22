@@ -15,7 +15,7 @@ const FeedNav: React.FC = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink disable href="#">Link</NavLink>
+            <NavLink disable href="/write">Write</NavLink>
           </NavItem>
           <NavItem className='ml-auto' style={{'text-decoration':'underline'}}>
             <NavLink href="/me"> My Account</NavLink>

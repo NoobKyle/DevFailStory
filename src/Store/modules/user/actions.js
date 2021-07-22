@@ -35,6 +35,18 @@ export const Login = ( email, password ) => {
 
 				resolve();
 			})
+			.catch(err => {
+				dispatch({
+					type:"ERROR",
+					data: true
+				})
+
+				setTimeout(function(){
+					dispatch({
+							type:"ERROR",
+							data: false
+						}) }, 2000);
+			})
 		})
 	};
 };
@@ -66,6 +78,18 @@ export const Signup = ( username, email, password ) => {
 				});
 
 				resolve();
+			})
+			.catch(err => {
+				dispatch({
+					type:"ERROR",
+					data: true
+				})
+
+				setTimeout(function(){
+					dispatch({
+							type:"ERROR",
+							data: false
+						}) }, 2000);
 			})
 		})
 	};
@@ -167,8 +191,21 @@ export const PublishArticle = ( content ) => {
 					  "updated_by": "string"
 					}
 				})
+				.then(res =>{
+					resolve();
+				})
+				.catch(err => {
+					dispatch({
+						type:"ERROR",
+						data: true
+					})
 
-			resolve();
+					setTimeout(function(){
+						dispatch({
+								type:"ERROR",
+								data: false
+							}) }, 2000);
+				})
 		})
 	}
 };

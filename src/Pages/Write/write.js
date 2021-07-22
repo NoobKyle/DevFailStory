@@ -31,6 +31,7 @@ const Write: React.FC = () => {
 
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
+    const error = useSelector(state => state.user.error);
 
     function toggle(){
       setOpen(true);
@@ -73,6 +74,10 @@ const Write: React.FC = () => {
 
       <Modal size="sm" open={open2}>
         <ModalBody>📥 Article Published!</ModalBody>
+      </Modal>
+
+      <Modal size="sm" open={error} centered="true" className="error" toggle={()=>{}}>
+        <ModalBody>PUBLISH ERROR !</ModalBody>
       </Modal>
 
       <Container className="writecontainer">
