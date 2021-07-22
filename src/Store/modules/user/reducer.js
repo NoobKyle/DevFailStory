@@ -12,7 +12,8 @@ const initialState = {
       description: 'No Title',
 			headerurl: 'No Url',
       content: 'No Content'
-    }
+    },
+	error: false
 };
 
 export default function userReducer(state = initialState, action){
@@ -31,6 +32,9 @@ export default function userReducer(state = initialState, action){
 				break;
 			case "ARTICLE_SAVE":
 				draft.write = action.data;
+				break;
+			case "ERROR":
+				draft.error = action.data;
 				break;
 			default:
 		}

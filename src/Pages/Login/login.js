@@ -3,11 +3,13 @@ import {
   Button,
   Form,
   FormInput,
-  FormGroup
+  FormGroup,
+  Modal,
+  ModalBody
 } from "shards-react";
 import './login.css';
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Login } from "../../Store/modules/user/actions";
 
 import Navbar from '../../Components/NavBar';
@@ -17,6 +19,8 @@ const LoginPage: React.FC = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const open = useSelector(state => state.user.error);
 
     function LoginFunction(e){
       e.preventDefault();
@@ -29,6 +33,9 @@ const LoginPage: React.FC = () => {
     return (
     <div>
       <Navbar />
+        <Modal size="sm" open={open} centered="true" className="error" toggle={()=>{}}>
+          <ModalBody>LOGIN ERROR !</ModalBody>
+        </Modal>
 
       <h3 className='headertext'>Login</h3>
       <Form className='loginForm'>

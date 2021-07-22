@@ -3,11 +3,13 @@ import {
   Button,
   Form,
   FormInput,
-  FormGroup
+  FormGroup,
+  Modal,
+  ModalBody
 } from "shards-react";
 import './signup.css';
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Signup } from "../../Store/modules/user/actions";
 
 import Navbar from '../../Components/NavBar';
@@ -18,6 +20,8 @@ const SignupPage: React.FC = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const open = useSelector(state => state.user.error);
 
     function SignupFunction(e){
       e.preventDefault();
@@ -30,6 +34,9 @@ const SignupPage: React.FC = () => {
     return (
     <div>
       <Navbar />
+        <Modal size="sm" open={open} centered="true" className="error" toggle={()=>{}}>
+          <ModalBody>SIGNUP ERROR !</ModalBody>
+        </Modal>
 
       <h3 className='headertext'>Signup</h3>
       <Form className='loginForm'>
