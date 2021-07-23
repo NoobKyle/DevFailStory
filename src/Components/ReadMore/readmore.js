@@ -6,27 +6,21 @@ import './readmore.css';
 const ReadMore: React.FC = () => {
 
   const articles = useSelector(state => state.feed.data);
-  
+
   return (
     <div>
-        <Container className='readmorecontainer'>
+        <Container fluid className='readmorecontainer'>
           <h5>Read More</h5>
           <Row>
-            <Col className="smallercontainer">
-              <img src='https://source.unsplash.com/random' alt=""/>
-              <br/>
+            <Col sm="12" md="4" lg="4" className="smallercontainer">
               <h5>This is the title</h5>
               <p className="smalltext">The Description for the post would be here</p>
             </Col>
-            <Col className="smallercontainer">
-              <img src='https://source.unsplash.com/random' alt=""/>
-              <br/>
+            <Col sm="12" md="4" lg="4" className="smallercontainer">
               <h5>This is the title</h5>
               <p className="smalltext">The Description for the post would be here</p>
             </Col>
-            <Col className="smallercontainer">
-              <img src='https://source.unsplash.com/random' alt=""/>
-              <br/>
+            <Col sm="12" md="4" lg="4" className="smallercontainer">
               <h5>This is the title</h5>
               <p className="smalltext">The Description for the post would be here</p>
             </Col>

@@ -104,9 +104,6 @@ const Write: React.FC = () => {
                     <h6>Description</h6>
                     <FormTextarea onChange={(e) => setDescription(e.target.value)} />
                     <br/>
-                    <h6>Header Image Url</h6>
-                    <FormInput placeholder="https://website.com" onChange={(e) => setHeaderurl(e.target.value)} />
-                    <br/>
                     <p>Enter the Title, Description and Header Image url for your post which will
                     be used on the main feed page to inform readers what your post
                     is about at first glance.</p>
@@ -116,11 +113,6 @@ const Write: React.FC = () => {
               <Row className='controls'>
                       <CardBody>
                         <h5>Controls</h5>
-                        <p>This is why the next 12 months, I will be pulling back
-                        the curtain on my business and providing a raw, real and
-                        vulnerable look inside my entrepreneurial journey building
-                        my new agency, Predictable Growth.
-                        </p>
                         <Button outline onClick={() => { SaveContent() }}>Save</Button>
                         <Button outline onClick={() => { PublishContent() }}>Publish</Button>
                       </CardBody>

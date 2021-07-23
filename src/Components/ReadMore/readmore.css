@@ -1,4 +1,5 @@
 .readmorecontainer{
+  margin-top: 2.2rem;
   padding: 0;
 }
 
@@ -7,13 +8,6 @@
   align-items: center;
 
   padding: 1rem;
-}
-
-.smallercontainer img{
-  height: 50%;
-  width: 100%;
-
-  padding-bottom: 1rem;
 }
 
 .smalltext{
