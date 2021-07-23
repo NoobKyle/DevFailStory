@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
 
 import Landing from './Pages/Static/LandingPage/landing';
@@ -53,7 +48,7 @@ function App() {
                   <About/>
               </Route>
               <Route path="*">
-                  <NotFound/> 
+                  <NotFound/>
               </Route>
             </Switch>
         </Router>
