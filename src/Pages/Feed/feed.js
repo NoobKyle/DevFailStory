@@ -43,7 +43,6 @@ const Feed: React.FC = () => {
 
                       {articles.map((article, index) => (
                           <div key={index} className='feedcards'>
-                              <CardImg src={article.Headerurl} className="cardheaderimage"/>
                               <CardTitle className="articlelikes">{article.id}</CardTitle>
                               <a href={`/story/${article.Slug}`} style={{ width: "100%"}}>
                                 <div className="articlewrapper">

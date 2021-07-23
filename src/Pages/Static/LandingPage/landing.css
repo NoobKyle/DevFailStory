@@ -5,23 +5,28 @@
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
+.landingcontainer{
+}
+
 .headertext{
-    font-size: 2.5rem;
-    font-weight: bold;
-    padding-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 4rem;
 }
 
 .headersubtext{
-    font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .headerimg{
-    width: 60vw;
+  width: 60vw;
 }
 
 .explainertext{
-    padding-left: 25%;
-    padding-right: 25%;
+  width: auto;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .quotetext{

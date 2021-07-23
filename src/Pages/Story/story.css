@@ -10,6 +10,7 @@
   padding-right: 23rem; */
   /* width: calc(100% - 30px); */
   width: 43.75rem;
+  max-width: 100%;
 }
 
 .storyheading{

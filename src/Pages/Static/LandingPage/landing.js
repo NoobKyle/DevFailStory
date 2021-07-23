@@ -10,7 +10,7 @@ import Footer from '../../../Components/Footer';
 export default class Landing extends React.Component {
   render() {
     return (
-    <div>
+    <div className="landingcontainer">
       <Navbar />
 
       <h3 className='headertext'>Share and learn from developer failure stories</h3>
