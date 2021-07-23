@@ -11,6 +11,7 @@ import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/signup';
 import Landing from './Pages/Static/LandingPage/landing';
 import About from './Pages/Static/About/about';
+import Story from './Pages/Story/story';
 import NotFound from './Pages/Static/404/404';
 
 import App from './App';
@@ -44,6 +45,9 @@ const PrivateRoutes: React.FC = () => {
             </Route>
             <Route exact path="/about">
               <About />
+            </Route>
+            <Route path="/story/:id/ref=twitter">
+              <Story />
             </Route>
             <Route exact path="*">
               <NotFound />
