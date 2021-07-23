@@ -1,12 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  CardBody,
-  Container,
-  Row,
-  Col,
-  CardTitle,
-  CardImg,
-} from "shards-react";
+import { CardBody, Container, Row, Col, CardTitle } from "shards-react";
 import './feed.css';
 
 import { useSelector, useDispatch } from "react-redux";

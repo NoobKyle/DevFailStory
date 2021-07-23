@@ -14,7 +14,7 @@ const LikeShare: React.FC = () => {
           <Row>
             <Col><AiOutlineHeart/></Col>
             <Col>
-              <a href={`https://twitter.com/intent/tweet?text=Hey!%20check%20out%20this%20awesome%20post%20I%20found%20on%20%23devfailstory%0D%0D${postURL}/ref=twitter`} target="_blank">
+              <a href={`https://twitter.com/intent/tweet?text=Hey!%20check%20out%20this%20awesome%20post%20I%20found%20on%20%23devfailstory%0D%0D${postURL}/ref=twitter`} target="_blank" rel="noreferrer">
                 <FiShare className="sharebutton"/>
               </a>
             </Col>
