@@ -14,7 +14,7 @@ export default class Landing extends React.Component {
           <h4>Oops! , Page not found.</h4>
 
           <br/>
-          <h3><a href='/feed'> -Home- </a></h3>
+          <h3><a href='/login'> -Login- </a></h3>
         </div>
       </div>
     );
