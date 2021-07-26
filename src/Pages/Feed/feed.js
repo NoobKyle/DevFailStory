@@ -41,6 +41,7 @@ const Feed: React.FC = () => {
                                 <div className="articlewrapper">
                                     <CardTitle style={{ margin: "0"}} className="cardtitle">{article.Title}</CardTitle>
                                     <p>{article.Description}</p>
+                                    <hr/>
                                 </div>
                               </a>
                           </div>
