@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import Editor from "rich-markdown-editor";
-import {
-  Button,
-  Card,
-  CardBody,
-  Container,
-  Row,
-  Col,
-  FormInput,
-  FormTextarea,
-  Modal, ModalBody
-} from "shards-react";
+import { Button, CardBody, Container, Row, Col, FormInput, FormTextarea, Modal, ModalBody } from "shards-react";
 import './write.css';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -26,7 +16,6 @@ const Write: React.FC = () => {
 
     const [title, setTitle] = useState('No Title');
     const [description, setDescription] = useState('No Description');
-    const [headerurl, setHeaderurl] = useState('No Url');
     const [editor, setEditor] = useState('No Content');
 
     const [open, setOpen] = useState(false);
@@ -47,7 +36,7 @@ const Write: React.FC = () => {
     }
 
     function SaveContent(){
-      dispatch( SaveArticle(title, description, headerurl, editor))
+      dispatch( SaveArticle(title, description, editor))
       .then(() => {
         toggle();
       })
@@ -104,7 +93,7 @@ const Write: React.FC = () => {
                     <h6>Description</h6>
                     <FormTextarea onChange={(e) => setDescription(e.target.value)} />
                     <br/>
-                    <p>Enter the Title, Description and Header Image url for your post which will
+                    <p>Enter the Title and Description for your post which will
                     be used on the main feed page to inform readers what your post
                     is about at first glance.</p>
                   </CardBody>

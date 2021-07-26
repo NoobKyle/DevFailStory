@@ -1,12 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  CardBody,
-  Container,
-  Row,
-  Col,
-  CardTitle,
-  CardImg,
-} from "shards-react";
+import { CardBody, Container, Row, Col, CardTitle } from "shards-react";
 import './feed.css';
 
 import { useSelector, useDispatch } from "react-redux";
@@ -48,6 +41,7 @@ const Feed: React.FC = () => {
                                 <div className="articlewrapper">
                                     <CardTitle style={{ margin: "0"}} className="cardtitle">{article.Title}</CardTitle>
                                     <p>{article.Description}</p>
+                                    <hr/>
                                 </div>
                               </a>
                           </div>

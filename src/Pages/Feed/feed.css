@@ -5,6 +5,7 @@
 
 .maincontentcontainer{
   margin-bottom: 4rem;
+  margin-top: 0 !important;
   /* background-color: #D2D2D2; */
 }
 
@@ -46,7 +47,7 @@ a:hover{
 }
 
 .articlewrapper{
-  margin: 1.5rem;
+  margin: 1rem;
 }
 
 .cardtitle{
