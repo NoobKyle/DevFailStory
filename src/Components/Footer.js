@@ -14,20 +14,20 @@ export default class NavBar extends React.Component {
           <Container>
             <Row>
              <Col>
-              <h5>Developer Fail Story</h5>
+              <h5 className="makewhite">Developer Fail Story</h5>
               <p> Made with <span style={{color: "red"}}>&#9829;</span> by<a href="https://twitter.com/kyle___t" target='_blank' rel="noreferrer"> Kyle</a></p>
              </Col>
              <Col>
-              <h6>Navigation</h6>
-              <a href='/feed'>Feed</a>
+              <h6 className="makewhite">Navigation</h6>
+              <a href='/feed' className="makeblue">Feed</a>
               <br/>
-              <a href='/write'>Write</a>
+              <a href='/write' className="makeblue">Write</a>
              </Col>
              <Col>
-              <h6>Platform</h6>
-              <a href='/about'>About</a>
+              <h6 className="makewhite">Platform</h6>
+              <a href='/about' className="makeblue">About</a>
               <br/>
-              <a href='/about#Ourstory'>Our Story</a>
+              <a href='/about#Ourstory' className="makeblue">Our Story</a>
               <br/>
               <a href='https://twitter.com/kyle___t' target='_blank' rel="noreferrer">Contact</a>
              </Col>

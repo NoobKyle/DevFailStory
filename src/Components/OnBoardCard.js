@@ -7,7 +7,7 @@ import {
 export default class OnBoardCard extends React.Component {
   render() {
     return (
-        <div className='feedarea'>
+        <div className='onboardSection'>
             <CardBody>
               <h5>Start Writing Today</h5>
               <p>Tell the full story, no filter, yes it was me, I deleted the db...

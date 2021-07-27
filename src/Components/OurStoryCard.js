@@ -7,7 +7,7 @@ import {
 export default class OurStoryCard extends React.Component {
   render() {
     return (
-        <div className='feedarea'>
+        <div className='ourstorySection'>
             <CardBody>
               <h5>Our Story</h5>
               <p>My goal is for Dev Fail Story to be a source of inspiration,

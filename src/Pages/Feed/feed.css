@@ -1,30 +1,25 @@
 .navigationbar{
-    background-color: white !important;
-    color: black;
+  background-color: white !important;
+  color: black;
 }
 
 .maincontentcontainer{
   margin-bottom: 4rem;
-  margin-top: 0 !important;
-  /* background-color: #D2D2D2; */
-}
-
-.container{
-  margin-top: 4rem;
-}
-
-.feedarea{
-  border-left: 0.5px solid grey;
-  border-top: 0.5px solid grey;
+  margin-top: 2rem !important;
 }
 
 .feedcards{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
+}
+
+.ourstorySection{
+  border-left: 0.5px solid grey;
 }
 
 .onboardSection{
-    margin-top: 2rem;
+  margin-top: 2rem;
+  border-left: 0.5px solid grey;
 }
 
 a{
@@ -36,31 +31,22 @@ a:hover{
   color: #323EBE !important;
 }
 
-.cardheaderimage{
-  width: 15%;
-  height: 100%;
-  margin: 1rem;
-}
-
-.articlelikes{
-  margin: 1.5rem;
-}
-
 .articlewrapper{
   margin: 1rem;
 }
 
 .cardtitle{
-  font-weight: 600;
-  font-size: 1.375rem;
+  font-weight: 500;
+  font-size: 1.875rem;
+}
+
+.articledescription{
+  font-size: 1.25rem;
+  color: grey;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-  .container{
-    margin-top: 0rem;
-  }
-
   .feedcards{
     flex-wrap: wrap;
   }
@@ -73,12 +59,12 @@ a:hover{
   .articlewrapper{
     margin-top: 1rem;
     margin-bottom: 3rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .articlelikes{
-    visibility: hidden;
-    margin: 0;
-    width: 0;
-    height: 0;
+  .maincontentcontainer{
+    margin-bottom: 4rem;
+    margin-top: 0 !important;
   }
 }
