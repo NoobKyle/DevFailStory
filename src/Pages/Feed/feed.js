@@ -29,18 +29,16 @@ const Feed: React.FC = () => {
       <Container className='maincontentcontainer'>
         <Row>
             <Col sm="12" md="9" lg="8">
-              <div className='feedarea'>
-                  <CardBody>
+                  <CardBody className='feedarea'>
                       <FeedNav />
                       <hr />
 
                       {articles.map((article, index) => (
                           <div key={index} className='feedcards'>
-                              <CardTitle className="articlelikes">{article.id}</CardTitle>
                               <a href={`/story/${article.Slug}`} style={{ width: "100%"}}>
                                 <div className="articlewrapper">
-                                    <CardTitle style={{ margin: "0"}} className="cardtitle">{article.Title}</CardTitle>
-                                    <p>{article.Description}</p>
+                                    <CardTitle className="cardtitle">{article.Title}</CardTitle>
+                                    <p className="articledescription">{article.Description}</p>
                                     <hr/>
                                 </div>
                               </a>
@@ -48,15 +46,14 @@ const Feed: React.FC = () => {
                         ))}
 
                   </CardBody>
-              </div>
             </Col>
 
             <Col>
                 <Row>
-                    <OurStoryCard />
+                  <OurStoryCard  />
                 </Row>
 
-              <Row className='onboardSection'>
+              <Row >
                   <OnBoardCard />
               </Row>
             </Col>

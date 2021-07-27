@@ -24,7 +24,7 @@ export default class NavBar extends React.Component {
               <a href='/write' className="makeblue">Write</a>
              </Col>
              <Col>
-              <h6 className="makewhite">Platform</h6>
+              <h6 className="makewhite" >Platform</h6>
               <a href='/about' className="makeblue">About</a>
               <br/>
               <a href='/about#Ourstory' className="makeblue">Our Story</a>
