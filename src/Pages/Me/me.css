@@ -1,25 +1,24 @@
 .navigationbar{
-    background-color: white !important;
-    color: black;
+  background-color: white !important;
+  color: black;
 
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
-.container{
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+.mepage{
+  margin-top: 2rem;
 }
 
 .feedcards{
-    display: flex;
+  display: flex;
 }
 
 .onboardSection{
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .profileheader{
-    text-align: center;
+  text-align: center;
 }
 
 .profileImage{
@@ -29,6 +28,9 @@
   border-radius: 50%;
   margin-left: 3rem;
   margin-right: 3rem;
+
+  text-align: center;
+  align-items: center;
 }
 
 .username{
@@ -36,14 +38,18 @@
   line-height: 0.1rem;
 
   margin-top: 2rem;
-  padding-left: 30%;
-  padding-right: 30%;
+}
+
+.username h3{
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .bio{
-    margin-top: 1.5rem;
-    padding-top: 1.2rem;
-    line-height: 0.1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  line-height: 0.1rem;
+  text-align: center;
 }
 
 .socialLinks{
@@ -51,6 +57,7 @@
   font-size: 1.1rem;
 
   align-items: center;
+  text-align: center;
 
   padding-top: 1rem;
   padding-left: 30%;
@@ -62,19 +69,10 @@
 }
 
 .postsContainer{
-    padding: 1rem;
-}
-
-.postsContainer Card{
-    width: 50%;
+  padding: 0;
 }
 
 .postcard{
-  margin: auto;
+  margin: 0;
   margin-top: 2rem;
-  max-width: 45vw;
-}
-
-.postimage{
-  max-height: 40vh;
 }

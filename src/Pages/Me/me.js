@@ -1,15 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Nav,
-  NavItem,
-  NavLink,
-  Card,
-  CardBody,
-  Container,
-  Row,
-  Col,
-  CardImg,
-} from "shards-react";
+import { Nav, NavItem, NavLink, Card, CardBody, Container, Row, Col, CardImg } from "shards-react";
 import './me.css';
 
 import { useSelector, useDispatch } from "react-redux";
@@ -38,21 +28,14 @@ const MePage: React.FC = () => {
     <div>
       <Navbar />
 
-      <Container>
+      <Container className="mepage">
         <Row>
             <Col sm="12" md="12" lg="12">
-              <Card className='feedarea'>
-                  <CardBody>
                     <div className="profiledeader">
-                        <div>
-                          <div>
-                            <img src="https://source.unsplash.com/random"  className="profileImage" alt=""/>
-                          </div>
-                          <div className="username">
-                            <h3>{me.username}</h3>
-                            <h6>489 Followers</h6>
-                            <a href="/feed">Follow</a>
-                          </div>
+                        <div className="username">
+                          <h3>Hey, {me.username}!</h3>
+                          <h6>489 Followers</h6>
+                          <a href="/feed">Follow</a>
                         </div>
 
                         <div className="bio">
@@ -64,8 +47,6 @@ const MePage: React.FC = () => {
                           <a href="https://twitter.com/kyle___t">Twitter</a>
                           <a href="https://twitter.com/kyle___t">Blog</a>
                         </div>
-
-
                     </div>
 
                     <div className="navigation">
@@ -92,18 +73,16 @@ const MePage: React.FC = () => {
 
                     <div className="postsContainer">
                       {me.articles.map((article, index) =>(
-                        <Card key={index} className='postcard'>
-                            <CardImg top src="https://source.unsplash.com/random" className='postimage'/>
-                            <CardBody>
+                          <a href={`/story/${article.Slug}`} style={{ width: "100%"}}>
+                            <CardBody key={index}>
                               <h4>{article.Title}</h4>
                               <p>{article.Description}</p>
+                              <hr/>
                             </CardBody>
-                         </Card>
+                          </a>
                       ))}
                     </div>
 
-                  </CardBody>
-              </Card>
             </Col>
         </Row>
       </Container>

@@ -26,7 +26,7 @@ const LoginPage: React.FC = () => {
     }
 
     return (
-    <div>
+    <div className="loginpage">
       <Navbar />
         <Modal open={error} centered="true" className="error" toggle={()=>{}}>
           <ModalBody>LOGIN ERROR !</ModalBody>
