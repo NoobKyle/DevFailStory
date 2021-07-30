@@ -1,6 +1,6 @@
 .footer{
   /* background-color: #e6e6e6; */
-  background-color: #15171A;
+  background-color: #1B1F24;
   color: white !important;
 
   padding: 0.3rem;
@@ -8,9 +8,9 @@
 }
 
 .makewhite{
-  color: white;
+  color: white !important;
 }
 
 .makeblue{
-  color: blue !important;
+  color: #8B949E !important;
 }
