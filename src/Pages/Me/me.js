@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Nav, NavItem, NavLink, Card, CardBody, Container, Row, Col, CardImg } from "shards-react";
+import { Nav, NavItem, NavLink, CardBody, Container, Row, Col } from "shards-react";
 import './me.css';
 
 import { useSelector, useDispatch } from "react-redux";
