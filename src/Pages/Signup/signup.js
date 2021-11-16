@@ -27,7 +27,7 @@ const SignupPage: React.FC = () => {
     }
 
     return (
-    <div>
+    <div className="signuppage">
       <Navbar />
         <Modal open={error} centered="true" className="error" toggle={()=>{}}>
           <ModalBody>SIGNUP ERROR !</ModalBody>
