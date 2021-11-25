@@ -1,11 +1,6 @@
-.navigationbar{
-    color: black;
-    background-color: white !important;
-
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
-}
 
 .landingcontainer{
+  text-align: center;
 }
 
 .headertext{
@@ -18,10 +13,28 @@
   font-size: 1.5rem;
 }
 
+.calltoaction{
+  color: white !important;
+  background-color: #1B1F24;
+  border-color: #1B1F24;
+  font-weight: bold;
+}
+
+.calltoaction:hover{
+    color: #1B1F24 !important;
+    background-color: white;
+    border-color: #1B1F24;
+}
+
 .headerimg{
   width: 60vw;
 }
 
+.poptext{
+  background-color: #F3F6FD;
+  padding: 1rem;
+  margin: 1rem;
+}
 .explainertext{
   width: auto;
   font-size: 1.2rem;
@@ -30,11 +43,8 @@
 }
 
 .quotetext{
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 0rem;
+  padding-top: 1rem;
   padding-bottom: 3rem;
 
   margin-top: 1rem;
-  margin-bottom: 2rem;
 }

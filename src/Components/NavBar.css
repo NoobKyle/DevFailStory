@@ -1,0 +1,10 @@
+.navigationbar{
+    color: white !important;
+    background-color: #1B1F24 !important;
+
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1), 0 5px 16px 0 rgba(0, 0, 0, 0.15);
+}
+
+.makewhite{
+  color: white !important;
+}

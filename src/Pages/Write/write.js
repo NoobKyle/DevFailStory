@@ -96,6 +96,7 @@ const Write: React.FC = () => {
                     <p>Enter the Title and Description for your post which will
                     be used on the main feed page to inform readers what your post
                     is about at first glance.</p>
+                    <p>Save first then Publish</p>
                   </CardBody>
               </Row>
 
